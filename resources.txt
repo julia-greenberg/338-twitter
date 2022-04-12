@@ -1,2 +1,3 @@
 Dash Python User Guide - https://dash.plotly.com/
 	- includes tutorials
+Dash Tutorial - https://towardsdatascience.com/dash-for-beginners-create-interactive-python-dashboards-338bfcb6ffa4
