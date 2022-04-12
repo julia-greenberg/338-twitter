@@ -1,5 +1,9 @@
 Dash Python User Guide - https://dash.plotly.com/
 	- includes tutorials
 Dash Tutorial - https://towardsdatascience.com/dash-for-beginners-create-interactive-python-dashboards-338bfcb6ffa4
+
 Pie Chart - https://plotly.com/python/pie-charts/
+
 Map for location data - https://plotly.com/python/mapbox-county-choropleth/ or https://plotly.com/python/scatter-plots-on-maps/
+
+Taking input on Dash - https://dash.plotly.com/basic-callbacks
