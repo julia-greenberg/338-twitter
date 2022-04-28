@@ -1,15 +1,25 @@
 from dash import Dash, dcc, html
 from dash.dependencies import Input, Output
 import dash
+import json
 
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = Dash(__name__, external_stylesheets=external_stylesheets)
 
+json_file = open("sample_comm.json")
+json_data = json.load(json_file)
+
 loyalFollowerDate = "01/01/2000"
-loyalFollowerHandle = "@TWITTER"
+loyalFollowerHandle = "@" + str(json_data["longest follower"])
 loyalFollowerLikes = 0
+
+interest_json = json_data["interests"]
+top_interests = list(interest_json.keys())
+int_list_data = []
+for i in range(len(top_interests)):
+    int_list_data.append((top_interests[i],interest_json[top_interests[i]] ))
 
 lfStr = str("Your most loyal follower: " + loyalFollowerHandle)
 lfDateStr = str(loyalFollowerHandle + " has followed you since " + loyalFollowerDate + ".")
@@ -25,7 +35,18 @@ app.layout = html.Div([
         html.H2(lfStr),
         html.P(lfDateStr),
         html.P(lfLikeStr)
-    ])
+    ]),
+    html.Div([
+        html.Ol(
+            [
+                html.Li(str(int_list_data[0][0] + ": " + int_list_data[0][1])),
+                html.Li(str(int_list_data[1][0] + ": " + int_list_data[1][1])),
+                html.Li(str(int_list_data[2][0] + ": " + int_list_data[2][1])),
+            ]
+        )
+    ]
+
+    )
 ])
 
 
