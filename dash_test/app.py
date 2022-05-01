@@ -7,9 +7,13 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = Dash(__name__, external_stylesheets=external_stylesheets)
 
 app.layout = html.Div([
+    html.Div('Welcome to TwitterHawk', style={'color': 'blue', 'background-color': 'grey', 'height': 60, 'fontSize': 20, 'text-align': 'center'}),
     html.P('Enter your twitter handle'),
     # debounce making sure enter is pressed
-    dcc.Input(id='handle', type='text', debounce=True),
+    html.Div([
+        html.P('@'),
+        dcc.Input(id='handle', type='text', debounce=True)
+        ], style={'display': 'inline-block', 'text-align': 'justify'}),
     html.P(id='err', style={'color': 'red'}),
     html.P(id='out')
 ])
