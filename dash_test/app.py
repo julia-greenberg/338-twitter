@@ -25,6 +25,9 @@ lfStr = str("Your most loyal follower: " + loyalFollowerHandle)
 lfDateStr = str(loyalFollowerHandle + " has followed you since " + loyalFollowerDate + ".")
 lfLikeStr = str(loyalFollowerHandle + " has liked " + str(loyalFollowerLikes) + " of your tweets.")
 
+#htmlStr =  '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Sunsets don&#39;t get much better than this one over <a href="https://twitter.com/GrandTetonNPS?ref_src=twsrc%5Etfw">@GrandTetonNPS</a>. <a href="https://twitter.com/hashtag/nature?src=hash&amp;ref_src=twsrc%5Etfw">#nature</a> <a href="https://twitter.com/hashtag/sunset?src=hash&amp;ref_src=twsrc%5Etfw">#sunset</a> <a href="http://t.co/YuKy2rcjyU">pic.twitter.com/YuKy2rcjyU</a></p>&mdash; US Department of the Interior (@Interior) <a href="https://twitter.com/Interior/status/463440424141459456?ref_src=twsrc%5Etfw">May 5, 2014</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>"'
+htmlStr = '<blockquote class="twitter-tweet"><a href="' + json_data["most popular tweet"] + '"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
+
 app.layout = html.Div([
     html.P('Enter your twitter handle'),
     # debounce making sure enter is pressed
@@ -41,12 +44,16 @@ app.layout = html.Div([
             [
                 html.Li(str(int_list_data[0][0] + ": " + str(int_list_data[0][1]))),
                 html.Li(str(int_list_data[1][0] + ": " + str(int_list_data[1][1]))),
-                html.Li(str(int_list_data[2][0] + ": " + str(int_list_data[2][1]))),
+                html.Li(str(int_list_data[2][0] + ": " + str(int_list_data[2][1])))
             ]
         )
-    ]
-
+    ]),
+    #<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Sunsets don&#39;t get much better than this one over <a href="https://twitter.com/GrandTetonNPS?ref_src=twsrc%5Etfw">@GrandTetonNPS</a>. <a href="https://twitter.com/hashtag/nature?src=hash&amp;ref_src=twsrc%5Etfw">#nature</a> <a href="https://twitter.com/hashtag/sunset?src=hash&amp;ref_src=twsrc%5Etfw">#sunset</a> <a href="http://t.co/YuKy2rcjyU">pic.twitter.com/YuKy2rcjyU</a></p>&mdash; US Department of the Interior (@Interior) <a href="https://twitter.com/Interior/status/463440424141459456?ref_src=twsrc%5Etfw">May 5, 2014</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    html.Div(
+        html.Iframe(srcDoc = htmlStr, height = 300, width = 400)
     )
+
+
 ])
 
 
