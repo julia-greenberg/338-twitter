@@ -2,9 +2,9 @@ body {
     font-family: sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* h1, h2, h3, h4, h5, h6 {
     color: hotpink
-}
+} */
 
 section {
     /* display: flex; */
@@ -22,10 +22,27 @@ section {
 } */
 
 .row {
-    display: flex
+    display: flex;
+    overflow: hidden;
 }
 
 section * {
     width: 100%;
 }
 
+header {
+    color: blue; 
+    background-color: grey;
+    height: 60px; 
+    font-size: 20; 
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+    padding-bottom: 20px
+}
+
+aside {
+    margin-top: 80px
+}

@@ -42,58 +42,61 @@ user = json_data["user"]
 # -------
 
 app.layout = html.Div([
-    html.Header(f'Welcome to TwitterHawk, @{user}', style={'color': 'blue', 'background-color': 'grey', 'height': 60, 'fontSize': 20, 'text-align': 'center'}),
-    
-    html.Div(
-        className="row",
-        children = [
-        html.Section([
-            html.H2(lfStr),
-            html.P(lfDateStr),
-            html.P(lfLikeStr),
+    html.Header(
+        html.H1(f'Welcome to TwitterHawk, @{user}')
+    ),
+    html.Aside([
+        html.Div(
+            className="row",
+            children = [
+            html.Section([
+                html.H2(lfStr),
+                html.P(lfDateStr),
+                html.P(lfLikeStr),
+                ]),
+            html.Section([
+                html.H2("Your most popular topics:"),
+                html.Ol(
+                    [
+                        html.Li(str(int_list_data[0][0] + ": " + str(int_list_data[0][1]))),
+                        html.Li(str(int_list_data[1][0] + ": " + str(int_list_data[1][1]))),
+                        html.Li(str(int_list_data[2][0] + ": " + str(int_list_data[2][1])))
+                    ]
+                )
             ]),
-        html.Section([
-            html.H2("Your most popular topics:"),
-            html.Ol(
-                [
-                    html.Li(str(int_list_data[0][0] + ": " + str(int_list_data[0][1]))),
-                    html.Li(str(int_list_data[1][0] + ": " + str(int_list_data[1][1]))),
-                    html.Li(str(int_list_data[2][0] + ": " + str(int_list_data[2][1])))
-                ]
-            )
-        ]),
-        html.Section([
-            html.H2("Your most popular tweet:"),
-            html.Iframe(srcDoc = topTweetStr, height = 300, width = 400)
-        ]),
-    ]),
-    html.Div(
-        className="row",
-        children = [
-        html.Section([
-                html.H2("Your least popular tweet:"),
-                html.Iframe(srcDoc = leastTweetStr, height = 300, width = 400)
-        ]),
-        html.Section([
-            html.H2("On twitter, you tend to be " + sentiment_strings[0]),
-            html.P(sentiment_strings[1]),
-            dcc.Graph(id="graph", figure=helpers.generate_chart(sentiment, user))
+            html.Section([
+                html.H2("Your most popular tweet:"),
+                html.Iframe(srcDoc = topTweetStr, height = 300, width = 400)
             ]),
-        html.Section([
-            dcc.Graph(
-                figure={
-                    'data': [
-                        {'x': list(times.keys()), 'y': list(times.values()), 'type': 'bar', 'name': 'Times'}
-                    ],
-                    'layout': {
-                        'title': 'Times you Tweet',
-                        'figure.layout.autosize': True,
-                        # 'config.responsive': True,
-                        'figure.layout.height': '300px'
+        ]),
+        html.Div(
+            className="row",
+            children = [
+            html.Section([
+                    html.H2("Your least popular tweet:"),
+                    html.Iframe(srcDoc = leastTweetStr, height = 300, width = 400)
+            ]),
+            html.Section([
+                html.H2("On twitter, you tend to be " + sentiment_strings[0]),
+                html.P(sentiment_strings[1]),
+                dcc.Graph(id="graph", figure=helpers.generate_chart(sentiment, user))
+                ]),
+            html.Section([
+                dcc.Graph(
+                    figure={
+                        'data': [
+                            {'x': list(times.keys()), 'y': list(times.values()), 'type': 'bar', 'name': 'Times'}
+                        ],
+                        'layout': {
+                            'title': 'Times you Tweet',
+                            'figure.layout.autosize': True,
+                            # 'config.responsive': True,
+                            'figure.layout.height': '300px'
+                        }
                     }
-                }
-            )      
-        ])]),
+                )      
+            ])])
+    ]),
     html.P(id='err', style={'color': 'red'}),
     html.P(id='out')
 ])
