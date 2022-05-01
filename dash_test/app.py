@@ -13,7 +13,7 @@ app.layout = html.Div([
     html.Div([
         html.P('@'),
         dcc.Input(id='handle', type='text', debounce=True)
-        ], style={'display': 'inline-block', 'text-align': 'justify'}),
+        ], style={'display': 'flex', 'text-align': 'justify'}),
     html.P(id='err', style={'color': 'red'}),
     html.P(id='out')
 ])
