@@ -39,9 +39,9 @@ app.layout = html.Div([
     html.Div([
         html.Ol(
             [
-                html.Li(str(int_list_data[0][0] + ": " + int_list_data[0][1])),
-                html.Li(str(int_list_data[1][0] + ": " + int_list_data[1][1])),
-                html.Li(str(int_list_data[2][0] + ": " + int_list_data[2][1])),
+                html.Li(str(int_list_data[0][0] + ": " + str(int_list_data[0][1]))),
+                html.Li(str(int_list_data[1][0] + ": " + str(int_list_data[1][1]))),
+                html.Li(str(int_list_data[2][0] + ": " + str(int_list_data[2][1]))),
             ]
         )
     ]
