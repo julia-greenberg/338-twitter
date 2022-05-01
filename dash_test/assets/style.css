@@ -17,10 +17,6 @@ section {
     padding: 10px
 }
 
-/* div {
-    display: inline-flex;
-} */
-
 .row {
     display: flex;
     overflow: hidden;
