@@ -1,0 +1,31 @@
+body {
+    font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: hotpink
+}
+
+section {
+    /* display: flex; */
+    /* text-align: justify; */
+    width: 33.1%;
+    height: 450px;
+    border: 1px solid red;
+    /* padding: 10px */
+    margin: 10px;
+    padding: 10px
+}
+
+/* div {
+    display: inline-flex;
+} */
+
+.row {
+    display: flex
+}
+
+section * {
+    width: 100%;
+}
+
