@@ -3,6 +3,9 @@ from dash.dependencies import Input, Output
 import dash
 import json
 
+import helpers
+import plotly.express as px
+import plotly.graph_objects as go
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
@@ -25,6 +28,13 @@ lfStr = str("Your most loyal follower: " + loyalFollowerHandle)
 lfDateStr = str(loyalFollowerHandle + " has followed you since " + loyalFollowerDate + ".")
 lfLikeStr = str(loyalFollowerHandle + " has liked " + str(loyalFollowerLikes) + " of your tweets.")
 
+# sentiment - score between 0 and 1
+sentiment = 0.74
+sentiment_strings = helpers.sentiment_score(sentiment)
+sentiment_percent = helpers.sentiment_breakdown(sentiment)
+
+user = json_data["user"]
+
 app.layout = html.Div([
     html.P('Enter your twitter handle'),
     # debounce making sure enter is pressed
@@ -45,13 +55,20 @@ app.layout = html.Div([
             ]
         )
     ]
-
-    )
+    ),
+    html.Div([
+        html.H2("On twitter, you tend to be " + sentiment_strings[0], style={'color': 'red'}),
+        html.P(sentiment_strings[1]),
+        html.B(sentiment_percent)
+    ]),
+    html.Div([
+        dcc.Graph(id="graph", figure=helpers.generate_chart(sentiment, user))
+    ])
 ])
-
 
 @app.callback(
     Output('out', 'children'),
+    Output("graph", "figure"), 
     Output('err', 'children'),
     Input('handle', 'value')
 )
@@ -67,3 +84,4 @@ def show_handle(handle):
 
 if __name__ == '__main__':
     app.run_server(debug=True)
+

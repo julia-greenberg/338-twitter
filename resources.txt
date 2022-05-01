@@ -7,3 +7,5 @@ Pie Chart - https://plotly.com/python/pie-charts/
 Map for location data - https://plotly.com/python/mapbox-county-choropleth/ or https://plotly.com/python/scatter-plots-on-maps/
 
 Taking input on Dash - https://dash.plotly.com/basic-callbacks
+
+Pie chart - https://plotly.com/python/pie-charts/
