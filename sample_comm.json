@@ -16,9 +16,13 @@
     ],
     "most interacted": "senator_armstrong",
     "interests": {
-        "sports": 12,
+        "politics": 108,
         "food": 32,
-        "politics": 108
+        "sports": 12
+
     },
-    "longest follower": "moreplatesmoredates"
+    "longest follower": "moreplatesmoredates",
+    "most popular tweet": "https://twitter.com/Dillo_Day/status/1520061361576943616?cxt=HHwWgIC52abwq5gqAAAA",
+    "least popular tweet": "https://twitter.com/NorthwesternU/status/1520089284988055552?cxt=HHwWgMC5qdTJuJgqAAAA"
+
 }
