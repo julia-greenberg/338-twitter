@@ -7,9 +7,11 @@ import helpers
 import plotly.express as px
 import plotly.graph_objects as go
 
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+# external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+external_stylesheets = ['https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap']
 
-app = Dash(__name__)
+app = Dash(__name__, title="TwitterHawk", external_stylesheets=external_stylesheets)
+app.css.config.serve_locally = True
 
 json_file = open("sample_comm.json")
 json_data = json.load(json_file)

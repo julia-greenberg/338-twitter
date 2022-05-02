@@ -1,5 +1,5 @@
 body {
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* h1, h2, h3, h4, h5, h6 {
@@ -12,7 +12,6 @@ section {
     width: 33.1%;
     height: 450px;
     border: 1px solid red;
-    /* padding: 10px */
     margin: 10px;
     padding: 10px
 }
@@ -28,7 +27,7 @@ section * {
 
 header {
     color: blue; 
-    background-color: grey;
+    background-color: #1DA1F2;
     height: 60px; 
     font-size: 20; 
     text-align: center;
@@ -40,5 +39,14 @@ header {
 }
 
 aside {
-    margin-top: 80px
+    margin-top: 80px;
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    color: #1DA1F2;
+    font-weight: bolder;
 }
