@@ -1,6 +1,7 @@
 from dash import Dash, dcc, html
 from dash.dependencies import Input, Output
 import dash
+from dash_iconify import DashIconify
 import json
 
 import helpers
@@ -44,9 +45,10 @@ user = json_data["user"]
 # -------
 
 app.layout = html.Div([
-    html.Header(
-        html.H1(f'Welcome to TwitterHawk, @{user}')
-    ),
+    html.Header([
+        html.H1(f'Welcome to TwitterHawk, @{user}'),
+        DashIconify(icon="fa-solid:fa-bars")
+    ]),
     html.Aside([
         html.Div(
             className="row",

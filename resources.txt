@@ -9,3 +9,7 @@ Map for location data - https://plotly.com/python/mapbox-county-choropleth/ or h
 Taking input on Dash - https://dash.plotly.com/basic-callbacks
 
 Pie chart - https://plotly.com/python/pie-charts/
+
+Favicon - https://stackoverflow.com/questions/59081062/how-to-use-font-awesome-icons-in-python-plotly-dash
+
+
