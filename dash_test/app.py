@@ -34,7 +34,7 @@ topTweetStr = '<blockquote class="twitter-tweet"><a href="' + json_data["most po
 leastTweetStr = '<blockquote class="twitter-tweet"><a href="' + json_data["least popular tweet"] + '"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
 
 # MY STUFF ADDED HERE - sentiment: score between 0 and 1
-sentiment = 0.74
+sentiment = 0.55
 sentiment_strings = helpers.sentiment_score(sentiment)
 sentiment_percent = helpers.sentiment_breakdown(sentiment)
 
@@ -72,7 +72,7 @@ app.layout = html.Div([
             ]),
         ]),
         html.Div(
-            className="row",
+            className="row2",
             children = [
             html.Section([
                     html.H2("Your least popular tweet:"),
@@ -84,6 +84,7 @@ app.layout = html.Div([
                 dcc.Graph(id="graph", figure=helpers.generate_chart(sentiment, user))
                 ]),
             html.Section([
+                html.H2("You're most active on Twitter during..."),
                 dcc.Graph(
                     figure={
                         'data': [

@@ -11,7 +11,7 @@ section {
     /* text-align: justify; */
     width: 33.1%;
     height: 450px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: 10px;
     padding: 10px
 }
@@ -19,6 +19,13 @@ section {
 .row {
     display: flex;
     overflow: hidden;
+    height: 375px;
+}
+
+.row2 {
+    display: flex;
+    overflow: hidden;
+    height: 600px
 }
 
 section * {
@@ -49,4 +56,9 @@ h1 {
 h2 {
     color: #1DA1F2;
     font-weight: bolder;
+}
+
+iframe {
+    height: 400px;
+    border: none;
 }
