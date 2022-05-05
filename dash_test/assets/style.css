@@ -6,6 +6,15 @@ body {
     color: hotpink
 } */
 
+section:hover{
+  background-color: #1DA1F2;
+  color: white !important;
+}
+
+section :hover h2{
+  color: white !important;
+}
+
 section {
     /* display: flex; */
     /* text-align: justify; */
@@ -15,6 +24,7 @@ section {
     margin: 10px;
     padding: 10px
 }
+
 
 .row {
     display: flex;
@@ -33,10 +43,10 @@ section * {
 }
 
 header {
-    color: blue; 
+    color: blue;
     background-color: #1DA1F2;
-    height: 60px; 
-    font-size: 20; 
+    height: 60px;
+    font-size: 20;
     text-align: center;
     position: fixed;
     width: 100%;
@@ -53,10 +63,7 @@ h1 {
     color: white;
 }
 
-h2 {
-    color: #1DA1F2;
-    font-weight: bolder;
-}
+
 
 iframe {
     height: 400px;
