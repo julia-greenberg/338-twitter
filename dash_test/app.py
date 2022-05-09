@@ -1,4 +1,4 @@
-from dash import Dash, dcc, html
+from dash import Dash, dcc, html, callback
 from dash.dependencies import Input, Output
 import dash
 from dash_iconify import DashIconify
@@ -45,10 +45,105 @@ user = json_data["user"]
 # -------
 
 app.layout = html.Div([
-    html.Header([
+    dcc.Location(id='url', refresh=False),
+    html.Div(id='page-content')])
+    # dcc.Location(id='url', refresh=False),
+    # id='page-content',
+    # children = [
+    #     dcc.Location(id='url', refresh=False),
+    #     html.Header([
+    #                 html.H1('Welcome to TwitterHawk'),
+    #             ]),
+    #     html.Aside([
+    #         html.Div(
+    #             className="home",
+    #             children=[html.H2("Enter your Twitter username:"),
+    #                         dcc.Input(id='handle', type='text', debounce=True),]
+    #         ),
+    #         html.P(id='err', style={'color': 'red'}),
+    #         html.P(id='out')])
+    # ])
+    # dcc.Location(id='url', refresh=False),
+    # html.Header([
+    #     html.H1(f'Welcome to TwitterHawk, @{user}'),
+    #     DashIconify(icon="fa-solid:fa-bars")
+    # ]),
+    # dcc.Link('Navigate to "/home"', href='/home'),
+    # html.Aside([
+    #     html.Div(
+    #         className="row",
+    #         children = [
+    #         html.Section([
+    #             html.H2(lfStr),
+    #             html.P(lfDateStr),
+    #             html.P(lfLikeStr),
+    #             ]),
+    #         html.Section([
+    #             html.H2("Your most popular topics:"),
+    #             html.Ol(
+    #                 [
+    #                     html.Li(str(int_list_data[0][0] + ": " + str(int_list_data[0][1]))),
+    #                     html.Li(str(int_list_data[1][0] + ": " + str(int_list_data[1][1]))),
+    #                     html.Li(str(int_list_data[2][0] + ": " + str(int_list_data[2][1])))
+    #                 ]
+    #             )
+    #         ]),
+    #         html.Section([
+    #             html.H2("Your most popular tweet:"),
+    #             html.Iframe(srcDoc = topTweetStr, height = 300, width = 400)
+    #         ]),
+    #     ]),
+    #     html.Div(
+    #         className="row2",
+    #         children = [
+    #         html.Section([
+    #                 html.H2("Your least popular tweet:"),
+    #                 html.Iframe(srcDoc = leastTweetStr, height = 300, width = 400)
+    #         ]),
+    #         html.Section([
+    #             html.H2("On twitter, you tend to be " + sentiment_strings[0]),
+    #             html.P(sentiment_strings[1]),
+    #             dcc.Graph(id="graph", figure=helpers.generate_chart(sentiment, user))
+    #             ]),
+    #         html.Section([
+    #             html.H2("You're most active on Twitter during..."),
+    #             dcc.Graph(
+    #                 figure={
+    #                     'data': [
+    #                         {'x': list(times.keys()), 'y': list(times.values()), 'type': 'bar', 'name': 'Times'}
+    #                     ],
+    #                     'layout': {
+    #                         'title': 'Times you Tweet',
+    #                         'figure.layout.autosize': True,
+    #                         # 'config.responsive': True,
+    #                         'figure.layout.height': '300px'
+    #                     }
+    #                 }
+    #             )      
+    #         ])])
+    # ]),
+    # html.P(id='err', style={'color': 'red'}),
+    # html.P(id='out')
+    # ])
+
+home_page_layout = [html.Header([
+                    html.H1('Welcome to TwitterHawk'),
+                ]),
+        html.Aside([
+            html.Div(
+                className="home",
+                children=[html.H2("Enter your Twitter username:"),
+                            dcc.Input(id='handle', type='text', debounce=True),]
+            ),
+            html.P(id='err', style={'color': 'red'}),
+            html.P(id='out')])
+    ]
+
+user_page_layout = [html.Header([
         html.H1(f'Welcome to TwitterHawk, @{user}'),
         DashIconify(icon="fa-solid:fa-bars")
     ]),
+    dcc.Link('Navigate to "/home"', href='/home'),
     html.Aside([
         html.Div(
             className="row",
@@ -103,8 +198,45 @@ app.layout = html.Div([
             ])])
     ]),
     html.P(id='err', style={'color': 'red'}),
-    html.P(id='out')
-])
+    html.P(id='out')]
+
+# @callback(Output('page-content', 'children'),
+#               [Input('url', 'pathname')])
+
+# def display_page(pathname):
+#     if pathname == "/":
+#         return home_page_layout
+#         # return [html.Header([
+#         #             html.H1('Welcome to TwitterHawk'),
+#         #         ]),
+#         #         html.Aside([
+#         #             html.Div(
+#         #                 className="home",
+#         #                 children=[html.H2("Enter your Twitter username:"),
+#         #                             dcc.Input(id='handle', type='text', debounce=True),]
+#         #             )
+#         #         ])
+#         # ]
+
+def show_handle(handle):
+    if handle is None:
+        # PreventUpdate prevents ALL outputs updating
+        raise dash.exceptions.PreventUpdate
+
+    # do something with twitter handle once its submitted?
+    # pass to the back end
+
+    return 'Your Twitter handle is @{}.'.format(handle), ''
+
+@callback(Output('page-content', 'children'),
+              [Input('url', 'pathname')])
+
+def display_page(pathname):
+    if pathname == '/user':
+        # call to back side
+        return user_page_layout
+    else:
+        return home_page_layout
 
 # @app.callback(
 #     Output('out', 'children'),
