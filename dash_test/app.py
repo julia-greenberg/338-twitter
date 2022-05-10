@@ -44,20 +44,15 @@ times = json_data["times"]
 user = json_data["user"]
 # -------
 
+# app.layout = html.Div([
+#     dcc.Location(id='url', refresh=False),
+#     html.Div(id='page-content'),
+#     dcc.Link(html.Button(id='submit-button', type='submit', children='Submit'), href='/page-2', style={'display':'none'}),
+#     dcc.Input(id='handle', type='text', debounce=True, style={'display': 'none'})
+# ])
 app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
-    html.Div(id='page-content')
-])
-
-@app.callback(Output('page-content', 'children'),
-              [Input('url', 'pathname')])
-def display_page(pathname):
-    if pathname == '/page-2':
-        return page_2_layout
-    else:
-        return input_page_
-
-input_page_ = html.Div([
+    html.Div(id='page-content'),
     html.Header([
         html.H1(f'Welcome to TwitterHawk')]),
     html.Aside([
@@ -81,22 +76,60 @@ input_page_ = html.Div([
     ])
 ])
 
+# @app.callback(Output('page-content', 'children'),
+#               [Input('url', 'pathname')])
+def display_page(pathname):
+    if pathname == '/page-2':
+        print("called")
+        return page_2_layout
+    else:
+        print("here")
+        return input_page_
+
+input_page_ = html.Div([
+    dcc.Location(id='url', refresh=False),
+    html.Div(id='page-content'),
+    html.Header([
+        html.H1(f'Welcome to TwitterHawk')]),
+    html.Aside([
+        html.Div(
+            className='home',
+            children=[
+                html.P('Enter your twitter handle'),
+                html.Div([
+                    html.P('@'),
+                    dcc.Input(id='handle', type='text', debounce=True)
+                ], style={'display': 'flex', 'text-align': 'justify'}),
+                # html.P(id='err', style={'color': 'red'}),
+                # html.P(id='out'),
+                # html.Div([
+                #     dcc.Link('Analyze', href='/page-2'),
+                # ])
+                dcc.Link(html.Button(id='submit-button', type='submit', children='Submit'), href='/page-2', id='submit-button')
+            ])
+    # debounce making sure enter is pressed
+
+    ])
+])
+
 @app.callback(
     # Output('out', 'children'),
     # Output('err', 'children'),
     Output('page-content', 'children'),
+    [Input('submit-button', 'n_clicks')],
     [Input('url', 'pathname')],
     # Input('handle', 'value'),
-    [Input('submit-button', 'n_clicks')],
-    [State('handle', 'value')]
+    [Input('handle', 'value')]
 )
 
-def show_handle(clicks, handle, pathname):
+def show_handle(clicks, pathname, handle):
     if handle is None:
         # PreventUpdate prevents ALL outputs updating
         raise dash.exceptions.PreventUpdate
     if clicks is not None and handle is not None:
-        display_page(pathname)
+        # print(handle)
+        if pathname == "/page-2":
+            return page_2_layout
         # return 'Your Twitter handle is @{}.'.format(handle), ''
     # do something with twitter handle once its submitted?
     # pass to the back end
@@ -104,6 +137,7 @@ def show_handle(clicks, handle, pathname):
     # return 'Your Twitter handle is @{}.'.format(handle), ''
 
 page_2_layout = html.Div([
+    dcc.Location(id='url', refresh=False),
     html.Header([
         html.H1(f'Welcome to TwitterHawk, @{user}'),
         DashIconify(icon="fa-solid:fa-bars")
