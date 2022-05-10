@@ -49,18 +49,33 @@ app.layout = html.Div([
     html.Div(id='page-content')
 ])
 
+@app.callback(Output('page-content', 'children'),
+              [Input('url', 'pathname')])
+def display_page(pathname):
+    if pathname == '/page-2':
+        return page_2_layout
+    else:
+        return input_page_
+
 input_page_ = html.Div([
-    html.Div('Welcome to TwitterHawk', style={'color': 'blue', 'background-color': 'grey', 'height': 60, 'fontSize': 20, 'text-align': 'center'}),
-    html.P('Enter your twitter handle'),
+    html.Header([
+        html.H1(f'Welcome to TwitterHawk')]),
+    html.Aside([
+        html.Div(
+            className='home',
+            children=[
+                html.P('Enter your twitter handle'),
+                html.Div([
+                    html.P('@'),
+                    dcc.Input(id='handle', type='text', debounce=True)
+                ], style={'display': 'flex', 'text-align': 'justify'}),
+                html.P(id='err', style={'color': 'red'}),
+                html.P(id='out'),
+                html.Div([
+                    dcc.Link('Analyze', href='/page-2'),
+                ])
+            ])
     # debounce making sure enter is pressed
-    html.Div([
-        html.P('@'),
-        dcc.Input(id='handle', type='text', debounce=True)
-        ], style={'display': 'flex', 'text-align': 'justify'}),
-    html.P(id='err', style={'color': 'red'}),
-    html.P(id='out'),
-    html.Div([
-        dcc.Link('Analyze', href='/page-2'),
 
     ])
 ])
@@ -142,13 +157,7 @@ page_2_layout = html.Div([
     html.P(id='out')
 ])
 
-@app.callback(Output('page-content', 'children'),
-              [Input('url', 'pathname')])
-def display_page(pathname):
-    if pathname == '/page-2':
-        return page_2_layout
-    else:
-        return input_page_
+
 
 
 if __name__ == '__main__':
