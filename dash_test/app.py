@@ -1,4 +1,4 @@
-from dash import Dash, dcc, html
+from dash import Dash, dcc, html, callback
 from dash.dependencies import Input, Output
 import dash
 from dash_iconify import DashIconify
@@ -45,6 +45,11 @@ user = json_data["user"]
 # -------
 
 app.layout = html.Div([
+    dcc.Location(id='url', refresh=False),
+    html.Div(id='page-content')
+])
+
+input_page_ = html.Div([
     html.Div('Welcome to TwitterHawk', style={'color': 'blue', 'background-color': 'grey', 'height': 60, 'fontSize': 20, 'text-align': 'center'}),
     html.P('Enter your twitter handle'),
     # debounce making sure enter is pressed
@@ -137,7 +142,13 @@ page_2_layout = html.Div([
     html.P(id='out')
 ])
 
-
+@app.callback(Output('page-content', 'children'),
+              [Input('url', 'pathname')])
+def display_page(pathname):
+    if pathname == '/page-2':
+        return page_2_layout
+    else:
+        return input_page_
 
 
 if __name__ == '__main__':
