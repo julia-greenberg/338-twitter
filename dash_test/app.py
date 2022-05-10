@@ -1,5 +1,5 @@
 from dash import Dash, dcc, html, callback
-from dash.dependencies import Input, Output
+from dash.dependencies import Input, Output, State
 import dash
 from dash_iconify import DashIconify
 import json
@@ -69,11 +69,12 @@ input_page_ = html.Div([
                     html.P('@'),
                     dcc.Input(id='handle', type='text', debounce=True)
                 ], style={'display': 'flex', 'text-align': 'justify'}),
-                html.P(id='err', style={'color': 'red'}),
-                html.P(id='out'),
-                html.Div([
-                    dcc.Link('Analyze', href='/page-2'),
-                ])
+                # html.P(id='err', style={'color': 'red'}),
+                # html.P(id='out'),
+                # html.Div([
+                #     dcc.Link('Analyze', href='/page-2'),
+                # ])
+                dcc.Link(html.Button(id='submit-button', type='submit', children='Submit'), href='/page-2')
             ])
     # debounce making sure enter is pressed
 
@@ -81,19 +82,26 @@ input_page_ = html.Div([
 ])
 
 @app.callback(
-    Output('out', 'children'),
-    Output('err', 'children'),
-    Input('handle', 'value')
+    # Output('out', 'children'),
+    # Output('err', 'children'),
+    Output('page-content', 'children'),
+    [Input('url', 'pathname')],
+    # Input('handle', 'value'),
+    [Input('submit-button', 'n_clicks')],
+    [State('handle', 'value')]
 )
-def show_handle(handle):
+
+def show_handle(clicks, handle, pathname):
     if handle is None:
         # PreventUpdate prevents ALL outputs updating
         raise dash.exceptions.PreventUpdate
-
+    if clicks is not None and handle is not None:
+        display_page(pathname)
+        # return 'Your Twitter handle is @{}.'.format(handle), ''
     # do something with twitter handle once its submitted?
     # pass to the back end
 
-    return 'Your Twitter handle is @{}.'.format(handle), ''
+    # return 'Your Twitter handle is @{}.'.format(handle), ''
 
 page_2_layout = html.Div([
     html.Header([
