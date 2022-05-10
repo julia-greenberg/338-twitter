@@ -5,11 +5,14 @@
         "sorrow": 15,
         "joy": 7
     },
-    "times": [
-        "early morning",
-        "early afternoon",
-        "late night"
-    ],
+    "times": {
+        "early morning": 4,
+        "late morning": 2,
+        "early afternoon": 3,
+        "late afternoon": 6,
+        "evening": 4,
+        "night": 2
+    },
     "locations": [
         "Home",
         "Work"
