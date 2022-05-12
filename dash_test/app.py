@@ -77,9 +77,9 @@ def user_info(json_data, username):
     lfLikeStr = str(loyalFollowerHandle + " has liked " + str(loyalFollowerLikes) + " of your tweets.")
     #https://twitter.com/barackobama/status/552767187694661632
 
-    topTweetStr = '<blockquote class="twitter-tweet"><a href=https://twitter.com/user/status/"' + json_data["most_popular_tweet"] + '"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
-    posTweetStr = '<blockquote class="twitter-tweet"><a href=https://twitter.com/user/status/"' + json_data["most_positive_tweet"] + '"></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
-
+    topTweetStr = '<blockquote class="twitter-tweet"><a href=https://twitter.com/user/status/' + json_data["most_popular_tweet"] + '></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
+    posTweetStr = '<blockquote class="twitter-tweet"><a href=http' + json_data["most_positive_tweet"].split('http')[-1] + '></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
+    print(posTweetStr)
     # MY STUFF ADDED HERE - sentiment: score between 0 and 1
     sentiment = 0.55
     sentiment_strings = helpers.sentiment_score(sentiment)
