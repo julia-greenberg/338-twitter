@@ -124,8 +124,8 @@ def user_info(json_data, username):
                 className="row2",
                 children = [
                 html.Section([
-                        html.H2("Your least popular tweet:"),
-                        html.Iframe(srcDoc = leastTweetStr, height = 300, width = 400)
+                        html.H2("Your most positive tweet:"),
+                        html.Iframe(srcDoc = posTweetStr, height = 300, width = 400)
                 ]),
                 html.Section([
                     html.H2("On twitter, you tend to be " + sentiment_strings[0]),
