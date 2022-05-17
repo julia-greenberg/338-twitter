@@ -62,7 +62,8 @@ def show_handle(clicks, pathname, handle):
             return [[], user_info(json_data, handle)]
 
 def user_info(json_data, username):
-    loyalFollowerDate = "01/01/2000"
+    loyalFollowerData = json_data["longest_follower"]["created_at"].split("-")
+    loyalFollowerStr = loyalFollowerData[1] + "/" + loyalFollowerData[2].split("T")[0] + "/" + loyalFollowerData[0]
     loyalFollowerHandle = "@" + str(json_data["longest_follower"]["username"])
     loyalFollowerLikes = 0
 
@@ -73,7 +74,7 @@ def user_info(json_data, username):
         int_list_data.append((top_interests[i],interest_json[top_interests[i]] ))
 
     lfStr = str("Your most loyal follower: " + loyalFollowerHandle)
-    lfDateStr = str(loyalFollowerHandle + " has followed you since " + loyalFollowerDate + ".")
+    lfDateStr = str(loyalFollowerHandle + " has followed you since " + loyalFollowerStr + ".")
     lfLikeStr = str(loyalFollowerHandle + " has liked " + str(loyalFollowerLikes) + " of your tweets.")
     #https://twitter.com/barackobama/status/552767187694661632
 
