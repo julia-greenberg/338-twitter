@@ -63,7 +63,8 @@ def show_handle(clicks, pathname, handle):
 
 def user_info(json_data, username):
     loyalFollowerDate = "01/01/2000"
-    loyalFollowerHandle = "@" + str(json_data["longest_follower"]["username"])
+    # loyalFollowerHandle = "@" + str(json_data["longest_follower"]["username"])
+    loyalFollowerHandle = str(json_data["longest_follower"]["username"])
     loyalFollowerLikes = 0
 
     interest_json = json_data["top_interests"]
@@ -93,7 +94,8 @@ def user_info(json_data, username):
     page_2_layout = html.Div([
         dcc.Location(id='url', refresh=False),
         html.Header([
-            html.H1(f'Welcome to TwitterHawk, @{username}'),
+            html.H1(['Welcome to TwitterHawk, ', html.A('@' + username, href=f'https://twitter.com/{username}')]),
+            # html.H1(f'Welcome to TwitterHawk, @{username}'),
             DashIconify(icon="fa-solid:fa-bars")
         ]),
         html.Aside([
@@ -101,7 +103,8 @@ def user_info(json_data, username):
                 className="row",
                 children = [
                 html.Section([
-                    html.H2(lfStr),
+                    # dcc.Link(html.Button(id='submit-button', type='submit', children='Submit'), href='/page-2')
+                    html.H2(['Your most loyal follower: ', html.A('@' + loyalFollowerHandle, href=f'https://twitter.com/{loyalFollowerHandle}')]),
                     html.P(lfDateStr),
                     html.P(lfLikeStr),
                     ]),
