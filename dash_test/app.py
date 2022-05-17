@@ -62,8 +62,8 @@ def show_handle(clicks, pathname, handle):
             return [[], user_info(json_data, handle)]
 
 def user_info(json_data, username):
-    loyalFollowerDate = "01/01/2000"
-    # loyalFollowerHandle = "@" + str(json_data["longest_follower"]["username"])
+    loyalFollowerData = json_data["longest_follower"]["created_at"].split("-")
+    loyalFollowerStr = loyalFollowerData[1] + "/" + loyalFollowerData[2].split("T")[0] + "/" + loyalFollowerData[0]
     loyalFollowerHandle = str(json_data["longest_follower"]["username"])
     loyalFollowerLikes = 0
 
@@ -74,13 +74,13 @@ def user_info(json_data, username):
         int_list_data.append((top_interests[i],interest_json[top_interests[i]] ))
 
     lfStr = str("Your most loyal follower: " + loyalFollowerHandle)
-    lfDateStr = str(loyalFollowerHandle + " has followed you since " + loyalFollowerDate + ".")
+    lfDateStr = str(loyalFollowerHandle + " has followed you since " + loyalFollowerStr + ".")
     lfLikeStr = str(loyalFollowerHandle + " has liked " + str(loyalFollowerLikes) + " of your tweets.")
     #https://twitter.com/barackobama/status/552767187694661632
 
     topTweetStr = '<blockquote class="twitter-tweet"><a href=https://twitter.com/user/status/' + json_data["most_popular_tweet"] + '></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
     posTweetStr = '<blockquote class="twitter-tweet"><a href=https://twitter.com/user/status/' + json_data["most_negative_tweet"]+ '></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
-    print(posTweetStr)
+    
     # MY STUFF ADDED HERE - sentiment: score between 0 and 1
     sentiment = 0.55
     sentiment_strings = helpers.sentiment_score(sentiment)
