@@ -3,6 +3,7 @@ from dash.dependencies import Input, Output, State
 import dash
 from dash_iconify import DashIconify
 import json
+import requests
 
 import helpers
 import plotly.express as px
@@ -16,6 +17,33 @@ app.css.config.serve_locally = True
 
 json_file = open("communication_final.json")
 json_data = json.load(json_file)
+
+topics = json_data["topic_engagement"]
+word_web_dict = {}
+for key in topics:
+    topic_score = topics[key]
+    if(topic_score > 1000):
+        word_web_dict[key] = int(topic_score/1000)
+word_web_text = ""
+for key in word_web_dict:
+    for i in range(word_web_dict[key]):
+        word_web_text += (key) + " "
+
+word_scores = str(word_web_dict)
+
+resp = requests.post('https://quickchart.io/wordcloud', json={
+    'format': 'png',
+    'width': 500,
+    'height': 500,
+    'fontScale': 15,
+    'rotation': 0.01,
+    'scale': 'linear',
+    'colors': ['#1DA1F2'],
+    'text': word_web_text,
+})
+
+with open('assets/newscloud.png', 'wb') as f:
+    f.write(resp.content)
 
 app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
@@ -80,7 +108,7 @@ def user_info(json_data, username):
 
     topTweetStr = '<blockquote class="twitter-tweet"><a href=https://twitter.com/user/status/' + json_data["most_popular_tweet"] + '></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
     posTweetStr = '<blockquote class="twitter-tweet"><a href=https://twitter.com/user/status/' + json_data["most_negative_tweet"]+ '></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
-    
+
     # MY STUFF ADDED HERE - sentiment: score between 0 and 1
     sentiment = 0.55
     sentiment_strings = helpers.sentiment_score(sentiment)
@@ -90,6 +118,8 @@ def user_info(json_data, username):
 
     #user = json_data["user"]
     user = "@sampleuser"
+
+
 
     page_2_layout = html.Div([
         dcc.Location(id='url', refresh=False),
@@ -150,7 +180,17 @@ def user_info(json_data, username):
                             }
                         }
                     )
-                ])])
+                ])]),
+                html.Div(
+                    className="row3",
+                    children = [
+                    html.Section([
+                            html.H2("Your most engaging topics"),
+                            html.Img(src = "assets/newscloud.png"),
+                            html.P("***Engagement scores:*** (can be added as text, potentially on hover)"),
+                            html.P(word_scores)
+                    ]),
+                    ])
         ]),
         html.P(id='err', style={'color': 'red'}),
         html.P(id='out')
