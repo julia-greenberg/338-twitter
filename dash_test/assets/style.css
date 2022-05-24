@@ -45,6 +45,11 @@ section {
     height: 600px
 }
 
+.row3 {
+    display: flex;
+    overflow: hidden;
+}
+
 /* .row2 section:hover{
     background-color: #1DA1F2;
     color: white !important;

@@ -107,7 +107,8 @@ def user_info(json_data, username):
     #https://twitter.com/barackobama/status/552767187694661632
 
     topTweetStr = '<blockquote class="twitter-tweet"><a href=https://twitter.com/user/status/' + json_data["most_popular_tweet"] + '></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
-    posTweetStr = '<blockquote class="twitter-tweet"><a href=https://twitter.com/user/status/' + json_data["most_negative_tweet"]+ '></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
+    posTweetStr = '<blockquote class="twitter-tweet"><a href=https://twitter.com/user/status/' + json_data["most_positive_tweet"]+ '></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
+    negTweetStr = '<blockquote class="twitter-tweet"><a href=https://twitter.com/user/status/' + json_data["most_negative_tweet"]+ '></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
 
     # MY STUFF ADDED HERE - sentiment: score between 0 and 1
     sentiment = 0.55
@@ -164,6 +165,20 @@ def user_info(json_data, username):
                     dcc.Graph(id="graph", figure=helpers.generate_chart(sentiment, username))
                     ]),
                 html.Section([
+                        html.H2("Your most negative tweet:"),
+                        html.Iframe(srcDoc = negTweetStr, height = 300, width = 400)
+                ])
+                ]),
+            html.Div(
+                className="row3",
+                children = [
+                html.Section([
+                        html.H2("Your most engaging topics"),
+                        html.Img(src = "assets/newscloud.png"),
+                        html.P("***Engagement scores:*** (can be added as text, potentially on hover)"),
+                        html.P(word_scores)
+                ]),
+                html.Section([
                     html.H2("You get the most engagement during these times..."),
                     dcc.Graph(
                         figure={
@@ -185,17 +200,8 @@ def user_info(json_data, username):
                             },
                         }
                     )
-                ])]),
-                html.Div(
-                    className="row3",
-                    children = [
-                    html.Section([
-                            html.H2("Your most engaging topics"),
-                            html.Img(src = "assets/newscloud.png"),
-                            html.P("***Engagement scores:*** (can be added as text, potentially on hover)"),
-                            html.P(word_scores)
-                    ]),
-                    ])
+                ])
+                ])
         ]),
         html.P(id='err', style={'color': 'red'}),
         html.P(id='out')
