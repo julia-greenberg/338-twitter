@@ -15,7 +15,7 @@ external_stylesheets = ['https://fonts.googleapis.com/css2?family=Poppins:wght@3
 app = Dash(__name__, title="TwitterHawk", external_stylesheets=external_stylesheets)
 app.css.config.serve_locally = True
 
-json_file = open("communication_final.json")
+json_file = open("comm_final.json")
 json_data = json.load(json_file)
 
 topics = json_data["topic_engagement"]
@@ -119,8 +119,6 @@ def user_info(json_data, username):
     #user = json_data["user"]
     user = "@sampleuser"
 
-
-
     page_2_layout = html.Div([
         dcc.Location(id='url', refresh=False),
         html.Header([
@@ -139,7 +137,7 @@ def user_info(json_data, username):
                     html.P(lfLikeStr),
                     ]),
                 html.Section([
-                    html.H2("Your most popular topics:"),
+                    html.H2("Your favorite topics to tweet about:"),
                     html.Ol(
                         [
                             html.Li(str(int_list_data[0][0] + ": " + str(int_list_data[0][1]))),
@@ -178,9 +176,9 @@ def user_info(json_data, username):
                                 'figure.layout.autosize': True,
                                 # 'config.responsive': True,
                                 'figure.layout.height': '300px',
-                                'xaxis':{
-                                    'title':'Time of Day'
-                                },
+                                # 'xaxis':{
+                                #     'title':'Time of Day'
+                                # },
                                 'yaxis':{
                                     'title':'Engagement'
                                 }
