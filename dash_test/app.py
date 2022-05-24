@@ -138,6 +138,10 @@ def user_info(json_data, username):
                     html.P(lfLikeStr),
                     ]),
                 html.Section([
+                    html.H2("Your most popular tweet:"),
+                    html.Iframe(srcDoc = topTweetStr, height = 300, width = 400)
+                ]),
+                html.Section([
                     html.H2("Your favorite topics to tweet about:"),
                     html.Ol(
                         [
@@ -146,10 +150,6 @@ def user_info(json_data, username):
                             html.Li(str(int_list_data[2][0] + ": " + str(int_list_data[2][1])))
                         ]
                     )
-                ]),
-                html.Section([
-                    html.H2("Your most popular tweet:"),
-                    html.Iframe(srcDoc = topTweetStr, height = 300, width = 400)
                 ]),
             ]),
             html.Div(
@@ -200,6 +200,10 @@ def user_info(json_data, username):
                             },
                         }
                     )
+                ]),
+                html.Section([
+                    html.H2("Share TwitterHawk with your Network!"),
+                    html.Iframe(srcDoc = '<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Everyone go check out TwitterHawk, the newest Twitter analysis tool!" data-url="https://twitterhawk.com" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>')
                 ])
                 ])
         ]),
