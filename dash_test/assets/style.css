@@ -127,3 +127,7 @@ a:hover {
 header { 
     z-index: 99 !important; 
 }
+
+.engagementScores{
+    white-space: pre-line
+}
