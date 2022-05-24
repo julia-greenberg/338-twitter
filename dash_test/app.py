@@ -45,6 +45,14 @@ resp = requests.post('https://quickchart.io/wordcloud', json={
 with open('assets/newscloud.png', 'wb') as f:
     f.write(resp.content)
 
+engagementScores = list(word_web_dict.items())
+engagementScores.sort(key=lambda tup: tup[1], reverse = True)
+del engagementScores[min(5, len(engagementScores)):]
+tooltipString = "Top engagement scores:"
+for i in range(len(engagementScores)):
+    tooltipString += "\n    " + str(engagementScores[i][0]) + ": " + str(engagementScores[i][1])
+
+    
 app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
     html.Div(id='page-content'),
@@ -174,9 +182,8 @@ def user_info(json_data, username):
                 children = [
                 html.Section([
                         html.H2("Your most engaging topics"),
-                        html.Img(src = "assets/newscloud.png"),
-                        html.P("***Engagement scores:*** (can be added as text, potentially on hover)"),
-                        html.P(word_scores)
+                            html.Img(src = "assets/newscloud.png",id="wordcloud"),
+                            html.P(tooltipString, className = "engagementScores")
                 ]),
                 html.Section([
                     html.H2("You get the most engagement during these times..."),
