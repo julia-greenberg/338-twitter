@@ -163,21 +163,28 @@ def user_info(json_data, username):
                 html.Section([
                     html.H2("On twitter, you tend to be " + sentiment_strings[0]),
                     html.P(sentiment_strings[1]),
-                    dcc.Graph(id="graph", figure=helpers.generate_chart(sentiment, user))
+                    dcc.Graph(id="graph", figure=helpers.generate_chart(sentiment, username))
                     ]),
                 html.Section([
-                    html.H2("You're most active on Twitter during..."),
+                    html.H2("You get the most engagement during these times..."),
                     dcc.Graph(
                         figure={
                             'data': [
-                                {'x': list(times.keys()), 'y': list(times.values()), 'type': 'bar', 'name': 'Times'}
+                                {'x': list(times.keys()), 'y': list(times.values()), 'type': 'bar', 'name': 'Times',
+                                'marker' : { "color" : '#1DA1F2'}}
                             ],
                             'layout': {
-                                'title': 'Times you Tweet',
+                                # 'title': 'Times you Tweet',
                                 'figure.layout.autosize': True,
                                 # 'config.responsive': True,
-                                'figure.layout.height': '300px'
-                            }
+                                'figure.layout.height': '300px',
+                                'xaxis':{
+                                    'title':'Time of Day'
+                                },
+                                'yaxis':{
+                                    'title':'Engagement'
+                                }
+                            },
                         }
                     )
                 ])]),

@@ -118,3 +118,9 @@ h1 a {
 a:hover {
     color:#09334e !important;
 }
+
+
+
+header { 
+    z-index: 99 !important; 
+}
