@@ -8,6 +8,7 @@ import requests
 import helpers
 import plotly.express as px
 import plotly.graph_objects as go
+import os
 
 # external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 external_stylesheets = ['https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap']
@@ -95,7 +96,10 @@ def show_handle(clicks, pathname, handle):
     if clicks is not None and handle is not None:
         if pathname == "/page-2":
             # some call to access/analysis which creates "json data"
-            return [[], user_info(json_data, handle)]
+            os.system(f"src/comm_api.py {handle}")
+            user_file = open("src/comm_output.json")
+            user_data = json.load(user_file)
+            return [[], user_info(user_data, handle)]
 
 def user_info(json_data, username):
     loyalFollowerData = json_data["longest_follower"]["created_at"].split("-")
