@@ -1,4 +1,3 @@
-#!/usr/bin/python
 import get_comm_analysis
 import driver
 import json
