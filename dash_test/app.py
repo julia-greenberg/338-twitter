@@ -46,17 +46,7 @@ app.layout = html.Div([
     ),
 ])
 
-@app.callback(
-    # Output('out', 'children'),
-    # Output('err', 'children'),
-    Output('home-page','children'),
-    Output('page-content', 'children'),
-    [Input('submit-button', 'n_clicks')],
-    [State('url', 'pathname')],
-    [State('handle', 'value')]
-)
-
-def create_word_web(json_data)
+def create_word_web(json_data):
     topics = json_data["topic_engagement"]
     word_web_dict = {}
     for key in topics:
@@ -93,6 +83,16 @@ def create_word_web(json_data)
 
     return tooltipString
 
+@app.callback(
+    # Output('out', 'children'),
+    # Output('err', 'children'),
+    Output('home-page','children'),
+    Output('page-content', 'children'),
+    [Input('submit-button', 'n_clicks')],
+    [State('url', 'pathname')],
+    [State('handle', 'value')]
+)
+
 def show_handle(clicks, pathname, handle):
     if handle is None:
         # PreventUpdate prevents ALL outputs updating
@@ -104,9 +104,11 @@ def show_handle(clicks, pathname, handle):
             user_file = open("comm_output.json")
             user_data = json.load(user_file)
             tooltipString = create_word_web(user_data)
+            # tooltipString = ""
             return [[], user_info(user_data, handle, tooltipString)]
 
 def user_info(json_data, username, tooltipString):
+    #tooltipString = create_word_web(json_data)
     loyalFollowerData = json_data["longest_follower"]["created_at"].split("-")
     loyalFollowerStr = loyalFollowerData[1] + "/" + loyalFollowerData[2].split("T")[0] + "/" + loyalFollowerData[0]
     loyalFollowerHandle = str(json_data["longest_follower"]["username"])
@@ -127,50 +129,11 @@ def user_info(json_data, username, tooltipString):
     posTweetStr = '<blockquote class="twitter-tweet"><a href=https://twitter.com/user/status/' + json_data["most_positive_tweet"]+ '></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
     negTweetStr = '<blockquote class="twitter-tweet"><a href=https://twitter.com/user/status/' + json_data["most_negative_tweet"]+ '></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
 
-    # MY STUFF ADDED HERE - sentiment: score between 0 and 1
-    # sentiment = 0.55
     sentiment = (json_data["overall_compound_score"] + 1) / 2 
     sentiment_strings = helpers.sentiment_score(sentiment)
     sentiment_percent = helpers.sentiment_breakdown(sentiment)
 
     times = json_data["time_engagement"]
-
-    # topics = json_data["topic_engagement"]
-    # word_web_dict = {}
-    # for key in topics:
-    #     topic_score = topics[key]
-    #     if(topic_score > 1000):
-    #         word_web_dict[key] = int(topic_score/1000)
-    # word_web_text = ""
-    # for key in word_web_dict:
-    #     for i in range(word_web_dict[key]):
-    #         word_web_text += (key) + " "
-
-    # word_scores = str(word_web_dict)
-
-    # resp = requests.post('https://quickchart.io/wordcloud', json={
-    #     'format': 'png',
-    #     'width': 500,
-    #     'height': 500,
-    #     'fontScale': 15,
-    #     'rotation': 0.01,
-    #     'scale': 'linear',
-    #     'colors': ['#1DA1F2'],
-    #     'text': word_web_text,
-    # })
-
-    # with open('assets/newscloud.png', 'wb') as f:
-    #     f.write(resp.content)
-
-    # engagementScores = list(word_web_dict.items())
-    # engagementScores.sort(key=lambda tup: tup[1], reverse = True)
-    # del engagementScores[min(5, len(engagementScores)):]
-    # tooltipString = "Top engagement scores:"
-    # for i in range(len(engagementScores)):
-    #     tooltipString += "\n    " + str(engagementScores[i][0]) + ": " + str(engagementScores[i][1])
-
-    #user = json_data["user"]
-    user = "@sampleuser"
 
     page_2_layout = html.Div([
         dcc.Location(id='url', refresh=False),
@@ -262,9 +225,6 @@ def user_info(json_data, username, tooltipString):
         html.P(id='out')
     ])
     return page_2_layout
-
-
-
 
 if __name__ == '__main__':
     app.run_server(debug=True)
