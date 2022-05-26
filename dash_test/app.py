@@ -123,7 +123,8 @@ def user_info(json_data, username):
     negTweetStr = '<blockquote class="twitter-tweet"><a href=https://twitter.com/user/status/' + json_data["most_negative_tweet"]+ '></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
 
     # MY STUFF ADDED HERE - sentiment: score between 0 and 1
-    sentiment = 0.55
+    # sentiment = 0.55
+    sentiment = (json_data["overall_compound_score"] + 1) / 2 
     sentiment_strings = helpers.sentiment_score(sentiment)
     sentiment_percent = helpers.sentiment_breakdown(sentiment)
 
