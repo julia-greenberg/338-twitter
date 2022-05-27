@@ -78,8 +78,12 @@ def create_word_web(json_data):
 
     engagementScores = list(word_web_dict.items())
     engagementScores.sort(key=lambda tup: tup[1], reverse = True)
+    while(engagementScores[0][1] > 1000):
+        for i in range(len(engagementScores)):
+            engagementScores[i] = (engagementScores[i][0], int(engagementScores[i][1]/10))
     del engagementScores[min(5, len(engagementScores)):]
     tooltipString = ""
+    print(tooltipString)
     for i in range(len(engagementScores)):
         tooltipString += str(engagementScores[i][0]) + ": " + str(engagementScores[i][1]) + "\n"
 
