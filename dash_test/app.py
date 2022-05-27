@@ -68,6 +68,7 @@ def create_word_web(json_data):
         'rotation': 0.01,
         'scale': 'linear',
         'colors': ['black'],
+        'removeStopwords': 'true',
         'text': word_web_text
     })
 
@@ -78,9 +79,9 @@ def create_word_web(json_data):
     engagementScores = list(word_web_dict.items())
     engagementScores.sort(key=lambda tup: tup[1], reverse = True)
     del engagementScores[min(5, len(engagementScores)):]
-    tooltipString = "Top engagement scores:"
+    tooltipString = ""
     for i in range(len(engagementScores)):
-        tooltipString += "\n    " + str(engagementScores[i][0]) + ": " + str(engagementScores[i][1])
+        tooltipString += str(engagementScores[i][0]) + ": " + str(engagementScores[i][1]) + "\n"
 
     return tooltipString
 
@@ -191,6 +192,7 @@ def user_info(json_data, username, tooltipString):
                 html.Section([
                         html.H2("Your most engaging topics"),
                             html.Img(src = "assets/newscloud.png",id="wordcloud"),
+                            html.H4("Top engagement scores:"),
                             html.P(tooltipString, className = "engagementScores")
                 ]),
                 html.Section([
