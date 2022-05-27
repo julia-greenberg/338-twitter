@@ -124,10 +124,12 @@ a:hover {
     color:#09334e !important;
 }
 
-header { 
-    z-index: 99 !important; 
+header {
+    z-index: 99 !important;
 }
 
 .engagementScores{
-    white-space: pre-line
+    white-space: pre-line;
+    position:relative;
+    left:50px;
 }
