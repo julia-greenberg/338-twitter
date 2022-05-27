@@ -86,7 +86,7 @@ def create_word_web(json_data):
     tooltipString = ""
     for i in range(len(engagementScores)):
         tooltipString += str(engagementScores[i][0]) + ": " + str(engagementScores[i][1]) + "\n"
-        
+
     return tooltipString
 
 @app.callback(
@@ -128,7 +128,8 @@ def user_info(json_data, username, tooltipString):
 
     lfStr = str("Your most loyal follower: " + loyalFollowerHandle)
     lfDateStr = str(loyalFollowerHandle + " has followed you since " + loyalFollowerStr + ".")
-    lfLikeStr = str(loyalFollowerHandle + " has liked " + str(loyalFollowerLikes) + " of your tweets.")
+    lfLikeStr = "You two go way back."
+    #lfLikeStr = str(loyalFollowerHandle + " has liked " + str(loyalFollowerLikes) + " of your tweets.")
     #https://twitter.com/barackobama/status/552767187694661632
 
     topTweetStr = '<blockquote class="twitter-tweet"><a href=https://twitter.com/user/status/' + json_data["most_popular_tweet"] + '></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
