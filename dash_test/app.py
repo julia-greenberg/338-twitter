@@ -161,7 +161,7 @@ def user_info(json_data, username, tooltipString):
                     ]),
                 html.Section([
                     html.H2("Your most popular tweet:"),
-                    html.Iframe(srcDoc = topTweetStr, height = 300, width = 400)
+                    html.Iframe(className = "tweet", srcDoc = topTweetStr, height = 300, width = 400)
                 ]),
                 html.Section([
                     html.H2("Your favorite topics to tweet about:"),
@@ -179,7 +179,7 @@ def user_info(json_data, username, tooltipString):
                 children = [
                 html.Section([
                         html.H2("Your most positive tweet:"),
-                        html.Iframe(srcDoc = posTweetStr, height = 300, width = 400)
+                        html.Iframe(className = "tweet", srcDoc = posTweetStr, height = 300, width = 400)
                 ]),
                 html.Section([
                     html.H2("On twitter, you tend to be " + sentiment_strings[0]),
@@ -188,7 +188,7 @@ def user_info(json_data, username, tooltipString):
                     ]),
                 html.Section([
                         html.H2("Your most negative tweet:"),
-                        html.Iframe(srcDoc = negTweetStr, height = 300, width = 400)
+                        html.Iframe(className = "tweet", srcDoc = negTweetStr, height = 300, width = 400)
                 ])
                 ]),
             html.Div(
@@ -224,9 +224,16 @@ def user_info(json_data, username, tooltipString):
                     )
                 ]),
                 html.Section([
+                    html.H2("You can get a little emotional on Twitter..."),
+                    dcc.Graph(id="graph2", figure=helpers.generate_sentiment_chart(json_data))
+                    ]),
+                ]),
+            html.Div(
+                className="bottom",
+                children =
+                [
                     html.H2("Share TwitterHawk with your Network!"),
-                    html.Iframe(srcDoc = '<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Everyone go check out TwitterHawk, the newest Twitter analysis tool!" data-url="https://twitterhawk.com" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>')
-                ])
+                    html.Iframe(srcDoc = '<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Everyone go check out TwitterHawk, the newest Twitter analysis tool!" data-url="https://twitterhawk.com" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>', width = 100, height = 100)
                 ])
         ]),
         html.P(id='err', style={'color': 'red'}),

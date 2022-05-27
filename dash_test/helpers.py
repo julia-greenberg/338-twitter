@@ -30,6 +30,20 @@ def generate_chart(sentiment, user):
     values = [sentiment, 1 - sentiment]
     colors = ["green", "red"]
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent', title=f"Sentiment Breakdown for @{user}")])
-    fig.update_traces(textposition='inside', textinfo='percent+label', hoverinfo='label+percent', marker=dict(colors=colors))
+    fig.update_traces(textposition='inside', textinfo='percent+label', hoverinfo='label+percent')
     return fig
 
+    # "sentiments": {
+    #     "joy": 15,
+    #     "anger": 4,
+    #     "surprise": 1
+    # },
+    #  {'x': list(times.keys()), 'y': list(times.values()), 'type': 'bar', 'name': 'Times',
+    #                             'marker' : { "color" : '#1DA1F2'}}
+def generate_sentiment_chart(json_data):
+    sentiments = json_data["sentiments"]
+    labels =  list(sentiments.keys())
+    values = list(sentiments.values())
+    fig = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent')])
+    fig.update_traces(textposition='inside', textinfo='percent+label', hoverinfo='label+percent')
+    return fig

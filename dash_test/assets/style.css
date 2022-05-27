@@ -32,6 +32,11 @@ section {
     padding: 10px
 }
 
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .row {
     display: flex;
@@ -87,7 +92,7 @@ h1 {
     font-size: large;
 }
 
-iframe {
+.tweet {
     height: 400px;
     border: none;
 }
@@ -133,3 +138,11 @@ header {
     position:relative;
     left:50px;
 }
+
+iframe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+}
+
