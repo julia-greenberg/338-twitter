@@ -53,12 +53,23 @@ def create_word_web(json_data):
         topic_score = topics[key]
         if(topic_score > 0):
             word_web_dict[key] = topic_score
-    word_web_text = ""
-    for key in word_web_dict:
-        for i in range(word_web_dict[key]):
-            word_web_text += str(key) + " "
 
     word_scores = str(word_web_dict)
+
+    engagementScores = list(word_web_dict.items())
+    engagementScores.sort(key=lambda tup: tup[1], reverse = True)
+    while(engagementScores[0][1] > 1000):
+        for i in range(len(engagementScores)):
+            engagementScores[i] = (engagementScores[i][0], int(engagementScores[i][1]/10))
+    del engagementScores[min(5, len(engagementScores)):]
+    tooltipString = ""
+    for i in range(len(engagementScores)):
+        tooltipString += str(engagementScores[i][0]) + ": " + str(engagementScores[i][1]) + "\n"
+
+    word_web_text = ""
+    for word in engagementScores:
+        for i in range(word[1]):
+            word_web_text += word[0] + " "
 
     resp = requests.post('https://quickchart.io/wordcloud', json={
         'format': 'png',
@@ -74,17 +85,6 @@ def create_word_web(json_data):
 
     with open('assets/newscloud.png', 'wb') as f:
         f.write(resp.content)
-
-
-    engagementScores = list(word_web_dict.items())
-    engagementScores.sort(key=lambda tup: tup[1], reverse = True)
-    while(engagementScores[0][1] > 1000):
-        for i in range(len(engagementScores)):
-            engagementScores[i] = (engagementScores[i][0], int(engagementScores[i][1]/10))
-    del engagementScores[min(5, len(engagementScores)):]
-    tooltipString = ""
-    for i in range(len(engagementScores)):
-        tooltipString += str(engagementScores[i][0]) + ": " + str(engagementScores[i][1]) + "\n"
 
     return tooltipString
 
