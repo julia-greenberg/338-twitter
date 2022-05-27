@@ -83,7 +83,6 @@ def create_word_web(json_data):
             engagementScores[i] = (engagementScores[i][0], int(engagementScores[i][1]/10))
     del engagementScores[min(5, len(engagementScores)):]
     tooltipString = ""
-    print(tooltipString)
     for i in range(len(engagementScores)):
         tooltipString += str(engagementScores[i][0]) + ": " + str(engagementScores[i][1]) + "\n"
 
