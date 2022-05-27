@@ -19,7 +19,7 @@ app.css.config.serve_locally = True
 json_file = open("comm_final.json")
 json_data = json.load(json_file)
 
-    
+
 app.layout = html.Div([
     dcc.Location(id='url', refresh=False),
     html.Div(id='page-content'),
@@ -51,12 +51,12 @@ def create_word_web(json_data):
     word_web_dict = {}
     for key in topics:
         topic_score = topics[key]
-        if(topic_score > 1000):
-            word_web_dict[key] = int(topic_score/1000)
+        if(topic_score > 0):
+            word_web_dict[key] = topic_score
     word_web_text = ""
     for key in word_web_dict:
         for i in range(word_web_dict[key]):
-            word_web_text += (key) + " "
+            word_web_text += str(key) + " "
 
     word_scores = str(word_web_dict)
 
@@ -68,11 +68,12 @@ def create_word_web(json_data):
         'rotation': 0.01,
         'scale': 'linear',
         'colors': ['black'],
-        'text': word_web_text,
+        'text': word_web_text
     })
 
     with open('assets/newscloud.png', 'wb') as f:
         f.write(resp.content)
+
 
     engagementScores = list(word_web_dict.items())
     engagementScores.sort(key=lambda tup: tup[1], reverse = True)
@@ -104,7 +105,7 @@ def show_handle(clicks, pathname, handle):
             user_file = open("comm_output.json")
             user_data = json.load(user_file)
             tooltipString = create_word_web(user_data)
-            # tooltipString = ""
+            #tooltipString = ""
             return [[], user_info(user_data, handle, tooltipString)]
 
 def user_info(json_data, username, tooltipString):
@@ -129,7 +130,7 @@ def user_info(json_data, username, tooltipString):
     posTweetStr = '<blockquote class="twitter-tweet"><a href=https://twitter.com/user/status/' + json_data["most_positive_tweet"]+ '></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
     negTweetStr = '<blockquote class="twitter-tweet"><a href=https://twitter.com/user/status/' + json_data["most_negative_tweet"]+ '></a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
 
-    sentiment = (json_data["overall_compound_score"] + 1) / 2 
+    sentiment = (json_data["overall_compound_score"] + 1) / 2
     sentiment_strings = helpers.sentiment_score(sentiment)
     sentiment_percent = helpers.sentiment_breakdown(sentiment)
 
@@ -227,4 +228,4 @@ def user_info(json_data, username, tooltipString):
     return page_2_layout
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, dev_tools_hot_reload = False)
