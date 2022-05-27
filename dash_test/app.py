@@ -61,10 +61,6 @@ def create_word_web(json_data):
     while(engagementScores[0][1] > 1000):
         for i in range(len(engagementScores)):
             engagementScores[i] = (engagementScores[i][0], int(engagementScores[i][1]/10))
-    del engagementScores[min(5, len(engagementScores)):]
-    tooltipString = ""
-    for i in range(len(engagementScores)):
-        tooltipString += str(engagementScores[i][0]) + ": " + str(engagementScores[i][1]) + "\n"
 
     word_web_text = ""
     for word in engagementScores:
@@ -86,6 +82,11 @@ def create_word_web(json_data):
     with open('assets/newscloud.png', 'wb') as f:
         f.write(resp.content)
 
+    del engagementScores[min(5, len(engagementScores)):]
+    tooltipString = ""
+    for i in range(len(engagementScores)):
+        tooltipString += str(engagementScores[i][0]) + ": " + str(engagementScores[i][1]) + "\n"
+        
     return tooltipString
 
 @app.callback(
