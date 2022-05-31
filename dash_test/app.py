@@ -32,12 +32,13 @@ app.layout = html.Div([
                 html.Div(
                     className='home',
                     children=[
-                        html.P('Enter your twitter handle'),
+                        html.H2('Enter your twitter handle'),
                         html.Div([
                             html.P('@'),
                             dcc.Input(id='handle', type='text', debounce=True)
                         ], style={'display': 'flex', 'text-align': 'justify'}),
-                        dcc.Link(html.Button(id='submit-button', type='submit', children='Submit'), href='/page-2')
+                        dcc.Link(html.Button(id='submit-button', type='submit', children='Submit'), href='/page-2'),
+                        html.P(className='description', children=["TwitterHawk is a customized analytics tool for any Twitter user looking to understand their performance on the social media platform and learn how to maximize interactions with their followers."])
                     ])
             # debounce making sure enter is pressed
 
@@ -233,7 +234,8 @@ def user_info(json_data, username, tooltipString):
                 children =
                 [
                     html.H2("Share TwitterHawk with your Network!"),
-                    html.Iframe(srcDoc = '<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Everyone go check out TwitterHawk, the newest Twitter analysis tool!" data-url="https://twitterhawk.com" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>', width = 100, height = 100)
+                    html.Iframe(srcDoc = '<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Everyone go check out TwitterHawk, the newest Twitter analysis tool!" data-url="https://twitterhawk.com" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>', width = 100, height = 100),
+                    html.P(className='description', children=["TwitterHawk is a customized analytics tool for any Twitter user looking to understand their performance on the social media platform and learn how to maximize interactions with their followers."])
                 ])
         ]),
         html.P(id='err', style={'color': 'red'}),
