@@ -4,6 +4,7 @@ import dash
 from dash_iconify import DashIconify
 import json
 import requests
+import pdfkit
 
 import helpers
 import plotly.express as px
@@ -113,6 +114,9 @@ def show_handle(clicks, pathname, handle):
             tooltipString = create_word_web(user_data)
             #tooltipString = ""
             return [[], user_info(user_data, handle, tooltipString)]
+# @app.callback(dash.dependencies.Input('button-example-1', 'n_clicks'))
+# def download_pdf(n_clicks):
+#     return pdfkit.from_url('http://127.0.0.1:8050/page-2', 'out.pdf')
 
 def user_info(json_data, username, tooltipString):
     #tooltipString = create_word_web(json_data)
@@ -142,6 +146,42 @@ def user_info(json_data, username, tooltipString):
     sentiment_percent = helpers.sentiment_breakdown(sentiment)
 
     times = json_data["time_engagement"]
+    # hours_active = json_data["active_hours"]
+    # time_vals = list(hours_active.values())
+    # time_vals = time_vals.sort(reverse=True)
+    # top_time = ""
+    # for k in hours_active.keys():
+    #     import pdb; pdb.set_trace()
+    #     if hours_active.get(k) == time_vals[0]:
+    #         top_time = k
+
+    # time_thoughts = {
+    #     "0": "If it's after midnight, stop Tweeting!",
+    #     "1": "If it's after 1am, stop Tweeting!",
+    #     "2": "If it's after 2am, stop Tweeting!",
+    #     "3": "If it's after 3am, stop Tweeting!",
+    #     "4": "If it's after 4am, stop Tweeting!",
+    #     "5": "Early riser?, stop Tweeting at 4am!",
+    #     "6": "Early riser?, stop Tweeting at 4am!",
+    #     "7": "Tweets and cereal?",
+    #     "8": "Tweets and cereal?",
+    #     "9": "Tweeting on the drive to work?",
+    #     "10": "Tweeting on the drive to work?",
+    #     "11": "Tweeting at work?",
+    #     "12": "Tweeting and eating?",
+    #     "13": "Tweeting and eating?",
+    #     "14": "Tweeting and eating?",
+    #     "15": "Only two more hours left at work, might as well Tweet?",
+    #     "16": "Only one more hour left at work, might as well Tweet?",
+    #     "17": "Tweeting and eating?",
+    #     "18": "Tweeting and eating?",
+    #     "19": "Don't Tweet Eating",
+    #     "20": "Perhaps a new 8pm activity could be more relaxing",
+    #     "21": "Perhaps a new 9pm activity could be more relaxing",
+    #     "22": "Those 10pm Tweets tho",
+    #     "23": "If it's after 11pm, stop Tweeting!",
+    # }
+    
 
     page_2_layout = html.Div([
         dcc.Location(id='url', refresh=False),
@@ -203,6 +243,7 @@ def user_info(json_data, username, tooltipString):
                 ]),
                 html.Section([
                     html.H2("You get the most engagement during these times..."),
+                    # html.P(time_thoughts[top_time]),
                     dcc.Graph(
                         figure={
                             'data': [
@@ -235,13 +276,17 @@ def user_info(json_data, username, tooltipString):
                 [
                     html.H2("Share TwitterHawk with your Network!"),
                     html.Iframe(srcDoc = '<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Everyone go check out TwitterHawk, the newest Twitter analysis tool!" data-url="https://twitterhawk.com" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>', width = 100, height = 100),
-                    html.P(className='description', children=["TwitterHawk is a customized analytics tool for any Twitter user looking to understand their performance on the social media platform and learn how to maximize interactions with their followers."])
+                    html.P('To download and share PDF, Safari: File > Export to PDF; Chrome: File > Print > Destination: Save to PDF'),
+                    html.P(className='description', children=["TwitterHawk is a customized analytics tool for any Twitter user looking to understand their performance on the social media platform and learn how to maximize interactions with their followers."]),
+                    # html.Button('Submit', id='button-example-1')
                 ])
         ]),
         html.P(id='err', style={'color': 'red'}),
         html.P(id='out')
     ])
     return page_2_layout
+
+
 
 if __name__ == '__main__':
     app.run_server(debug=True, dev_tools_hot_reload = False)

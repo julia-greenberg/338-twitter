@@ -1,765 +1,777 @@
 {
     "topic_engagement": {
-        "Brand": 41,
-        "Entities [Entity Service]": 46,
-        "Interests and Hobbies Category": 46,
-        "Ongoing News Story": 8,
-        "Place": 7,
+        "Colleges & Universities": 1164,
+        "Local News": 1164,
+        "Interests and Hobbies Vertical": 24,
+        "Interests and Hobbies Category": 39,
+        "Cities": 23,
+        "Sport": 315,
+        "States": 27,
+        "Interests and Hobbies": 15,
+        "Fields of study": 15,
+        "Entities [Entity Service]": 6,
+        "Technology": 6,
+        "Ongoing News Story": 54,
+        "TV Shows": 6,
+        "Sports Team": 6,
+        "Sports League": 6,
+        "Brand": 61,
+        "Person": 24,
+        "Politician": 24,
+        "Political Body": 26,
         "Product": 14,
-        "Person": 9,
-        "TV Shows": 15
+        "Movie Genre": 0
     },
-    "most_positive_tweet": "835252818751733762",
-    "most_negative_tweet": "900867708065075200",
+    "most_positive_tweet": "1527314677167841281",
+    "most_negative_tweet": "1527390134815047680",
     "time_engagement": {
-        "night": 72,
+        "night": 97,
         "early morning": 0,
         "late morning": 0,
-        "early afternoon": 3,
-        "late afternoon": 147,
-        "early evening": 157,
-        "late evening": 241
+        "early afternoon": 24,
+        "late afternoon": 698,
+        "early evening": 156,
+        "late evening": 189
     },
     "sentiments": {
-        "joy": 82,
+        "joy": 60,
         "anger": 5,
-        "fear": 5
+        "sadness": 3
     },
     "active_hours": {
-        "20": 23,
+        "15": 20,
         "19": 15,
-        "16": 12
+        "14": 14
     },
     "top_interests": {
-        "Interests and Hobbies Category": 46,
-        "Entities [Entity Service]": 46,
-        "Brand": 41
+        "Local News": 1164,
+        "Colleges & Universities": 1164,
+        "Sport": 315
     },
     "most_interacted_user": [
-        "1187977640",
-        "1409848876366917634"
+        "41747400"
     ],
     "longest_follower": {
-        "created_at": "2017-09-19T20:05:17.000Z",
-        "id": "910233354666090496",
-        "name": "Data Decisioning",
-        "profile_image_url": "https://pbs.twimg.com/profile_images/996119460569235456/UMGf7WT9_normal.jpg",
-        "username": "datadecisioning"
+        "created_at": "2022-05-28T20:57:01.000Z",
+        "id": "1530654309804756994",
+        "name": "Assaultive",
+        "profile_image_url": "https://pbs.twimg.com/profile_images/1531271080228397056/anyCyvOm_normal.jpg",
+        "username": "AssaultiveJ"
     },
-    "most_popular_tweet": "1460710981496094724",
-    "overall_compound_score": 0.2926123711340206,
+    "most_popular_tweet": "1524766362996031488",
+    "overall_compound_score": 0.32269859154929575,
     "polarity_count": {
-        "positive tweets": 57,
-        "negative tweets": 15,
-        "netural tweets": 25
+        "positive tweets": 43,
+        "negative tweets": 10,
+        "netural tweets": 18
     },
     "top_3_tweets": [
-        "958366667419127808",
-        "1096264694925574145",
-        "1460710981496094724"
+        "1528024073653174274",
+        "1525489051167559680",
+        "1524766362996031488"
     ],
     "newest_10_followers": [
         {
-            "created_at": "2019-02-06T15:52:00.000Z",
-            "id": "1093175482533756928",
-            "name": "Mojtaba",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1093175807177117696/WVIF-eyC_normal.jpg",
-            "username": "MMAAKK2018"
+            "created_at": "2022-05-31T02:34:55.000Z",
+            "id": "1531464115029692416",
+            "name": "Georgia Rios",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531464418898620416/hKDUQMcB_normal.jpg",
+            "username": "Georgia13511382"
         },
         {
-            "created_at": "2010-11-22T14:34:19.000Z",
-            "id": "218502051",
-            "name": "Margie Meacham @ATD #AIinTD",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1342868660981940224/Dn6gPPQx_normal.jpg",
-            "username": "margiemeacham"
+            "created_at": "2019-11-08T23:14:49.000Z",
+            "id": "1192943510359609344",
+            "name": "bigint",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1383055934163976193/O-3QeIQP_normal.jpg",
+            "username": "aemonorien"
         },
         {
-            "created_at": "2010-03-31T10:02:34.000Z",
-            "id": "128178067",
-            "name": "Brian T. Edwards",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1342601491073392643/pToATsqG_normal.jpg",
-            "username": "LiquidData"
+            "created_at": "2022-04-28T13:19:46.000Z",
+            "id": "1519667593036115968",
+            "name": "Quinlan Grace",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1519685151915225088/cyepzExr_normal.jpg",
+            "username": "QuinGrace2026"
         },
         {
-            "created_at": "2020-11-02T14:51:50.000Z",
-            "id": "1323276522447425538",
-            "name": "Daniel Machado",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1468432672083128322/P-6nT86p_normal.jpg",
-            "username": "NielMachado1"
-        },
-        {
-            "created_at": "2014-11-07T00:33:02.000Z",
-            "id": "2864832233",
-            "name": "Sam Kriegman",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1460707475162865675/1ZKG2y94_normal.jpg",
-            "username": "Kriegmerica"
-        },
-        {
-            "created_at": "2013-12-24T19:10:45.000Z",
-            "id": "2242084019",
-            "name": "Joshua Mel\u00e9ndez Rivera",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1432031801451687943/TGHMnPs5_normal.jpg",
-            "username": "josh_melendez68"
-        },
-        {
-            "created_at": "2019-07-26T05:56:49.000Z",
-            "id": "1154631639533838336",
-            "name": "Erwin F. Rosales",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1225367098525995008/vFaUuJz6_normal.jpg",
-            "username": "ErwinFRosales1"
-        },
-        {
-            "created_at": "2021-05-02T15:24:41.000Z",
-            "id": "1388876767813783552",
-            "name": "Chris Cramer",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1478048436909973509/6YUye_NV_normal.jpg",
-            "username": "CRO_Cramer"
-        },
-        {
-            "created_at": "2010-08-09T00:02:04.000Z",
-            "id": "176235525",
-            "name": "Rosalind Picard",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/423189890545643520/w6Fjk14f_normal.png",
-            "username": "RosalindPicard"
-        },
-        {
-            "created_at": "2011-10-28T18:27:56.000Z",
-            "id": "400241522",
-            "name": "C\u00e1tedra @DatosUBA",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1405871665368666112/JDuyfR___normal.jpg",
-            "username": "DatosUBA"
-        },
-        {
-            "created_at": "2011-05-18T14:34:47.000Z",
-            "id": "300886557",
-            "name": "Chaz",
+            "created_at": "2021-12-29T14:19:51.000Z",
+            "id": "1476196154748583937",
+            "name": "Annalese Bartolacci",
             "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
-            "username": "chazzynh"
+            "username": "ABartolacci3"
         },
         {
-            "created_at": "2022-02-03T18:23:27.000Z",
-            "id": "1489303490891501568",
-            "name": "gladgeek",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1495660952804597766/MtRKXIt4_normal.jpg",
-            "username": "shushigaudani"
+            "created_at": "2022-05-04T11:24:20.000Z",
+            "id": "1521812922401501184",
+            "name": "Clarine Sweesy",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1521813111849762817/G_LDn2OT_normal.jpg",
+            "username": "ClarineSweesy"
         },
         {
-            "created_at": "2014-07-26T07:08:48.000Z",
-            "id": "2681625578",
-            "name": "Yash Arora \ud83c\udff3\ufe0f\u200d\ud83c\udf08",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1513939609734234112/koLVDaCd_normal.png",
-            "username": "zwattic"
+            "created_at": "2022-05-31T00:45:29.000Z",
+            "id": "1531436640018759681",
+            "name": "Logan Brennan",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531436786253176832/Qs0Zx8BV_normal.jpg",
+            "username": "LoganBrenn55"
         },
         {
-            "created_at": "2020-06-25T20:47:02.000Z",
-            "id": "1276255365529776130",
-            "name": "Sam Rodeghiero",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1481448933557776384/WBOx4_aD_normal.jpg",
-            "username": "sam_rodeghiero"
+            "created_at": "2022-02-24T08:31:16.000Z",
+            "id": "1496764164244709376",
+            "name": "May I. Tuchem \u2790",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530728474201169923/pZXfVICv_normal.jpg",
+            "username": "MayITuchem"
         },
         {
-            "created_at": "2017-07-09T21:56:40.000Z",
-            "id": "884169455588323328",
-            "name": "tanay",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1403944187129647104/afH7KOhC_normal.jpg",
-            "username": "tanaysri_"
-        },
-        {
-            "created_at": "2016-09-28T06:15:17.000Z",
-            "id": "781014396525023232",
-            "name": "Jiuqi Xian",
+            "created_at": "2011-07-22T18:21:46.000Z",
+            "id": "340446139",
+            "name": "qx",
             "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
-            "username": "xjiuqi"
+            "username": "pbxqdown"
         },
         {
-            "created_at": "2016-08-31T23:45:20.000Z",
-            "id": "771131788106272768",
-            "name": "Ning Shi",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/771132544687468544/NCI6YO-g_normal.jpg",
-            "username": "MrShininnnnn"
+            "created_at": "2009-06-13T04:13:10.000Z",
+            "id": "46823264",
+            "name": "YourNewFloatNurse",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1375469046993403909/RNj2cABk_normal.jpg",
+            "username": "AdrianneBehning"
         },
         {
-            "created_at": "2010-01-14T05:34:06.000Z",
-            "id": "104723631",
-            "name": "Deniz Orhun\u00ae\ufe0f",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/696774928452952064/RkzVqVMb_normal.jpg",
-            "username": "ddorhun"
+            "created_at": "2020-11-27T20:23:48.000Z",
+            "id": "1332419828540452864",
+            "name": "De.DesignStuff",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1332421006296801281/o6d-Ock9_normal.jpg",
+            "username": "DeDesignStuff"
         },
         {
-            "created_at": "2012-06-04T12:15:47.000Z",
-            "id": "599274507",
-            "name": "Beytullah Caliskan",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1184895408184672256/OwoFh9c-_normal.jpg",
-            "username": "B_Caliskan"
+            "created_at": "2022-05-30T19:59:25.000Z",
+            "id": "1531364565745016832",
+            "name": "Julie Smith",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531364953000902656/1I0EjmRr_normal.jpg",
+            "username": "JulieSm60636004"
         },
         {
-            "created_at": "2017-07-18T00:48:29.000Z",
-            "id": "887111799560183809",
-            "name": "PatientBuddy",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1430783936590974978/81RqAzPk_normal.jpg",
-            "username": "nikyak_buddy"
+            "created_at": "2022-05-30T19:03:35.000Z",
+            "id": "1531350514763386880",
+            "name": "Patrice Kirk",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531350894104612865/z4gDKV4D_normal.jpg",
+            "username": "Patrice82457111"
         },
         {
-            "created_at": "2011-04-23T14:01:22.000Z",
-            "id": "286687884",
-            "name": "Shivanshu Singh",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1524284455166550018/SA_ORJz6_normal.jpg",
-            "username": "shiva1908"
+            "created_at": "2022-05-30T18:41:54.000Z",
+            "id": "1531345128652263425",
+            "name": "Jason Woods\ud83c\udf32",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531345805147250688/hZQxnIk9_normal.jpg",
+            "username": "therealjtwoods"
         },
         {
-            "created_at": "2018-01-02T12:32:05.000Z",
-            "id": "948170025952673792",
-            "name": "Prahlad",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1346801442909130760/tTVt2v8q_normal.jpg",
-            "username": "prahlad_always"
+            "created_at": "2022-05-30T18:45:13.000Z",
+            "id": "1531345927071485958",
+            "name": "Danielle Scott",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531346089420460032/06aSJohk_normal.jpg",
+            "username": "Daniell31712233"
         },
         {
-            "created_at": "2009-05-07T13:12:40.000Z",
-            "id": "38427065",
-            "name": "Omar Badran",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/945663023099908096/uatYpe9M_normal.jpg",
-            "username": "OmarBadran37"
+            "created_at": "2022-05-30T18:47:13.000Z",
+            "id": "1531346430232764417",
+            "name": "Brenda Ross",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531346636714164224/QfWqujNk_normal.jpg",
+            "username": "BrendaR70888829"
         },
         {
-            "created_at": "2009-11-14T21:28:13.000Z",
-            "id": "90024908",
-            "name": "Tomasz Lipski",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1133551474351529984/qpW-50DK_normal.jpg",
-            "username": "tomaszlipski"
+            "created_at": "2022-05-30T17:51:40.000Z",
+            "id": "1531332451892711424",
+            "name": "Loriann Morris",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531332649591218176/3AAtjeSm_normal.jpg",
+            "username": "Loriann55314558"
         },
         {
-            "created_at": "2009-03-06T23:30:24.000Z",
-            "id": "23135984",
-            "name": "Samira Nazem",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1199912138/sam_normal.jpg",
-            "username": "SNazem"
+            "created_at": "2022-04-19T01:38:53.000Z",
+            "id": "1516229529173479424",
+            "name": "Kiona Henry",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1516235319938584576/I4n7mFUS_normal.jpg",
+            "username": "Kionahenry21"
         },
         {
-            "created_at": "2014-11-20T17:02:30.000Z",
-            "id": "2905312590",
-            "name": "Rachel B",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1525914336211914755/GLMzAXQf_normal.jpg",
-            "username": "ridicrach"
+            "created_at": "2016-03-18T04:24:10.000Z",
+            "id": "710683186791972865",
+            "name": "jacob",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1429988525470982146/S-hO0PmE_normal.jpg",
+            "username": "jacobcandrive"
         },
         {
-            "created_at": "2013-05-30T03:59:11.000Z",
-            "id": "1468859010",
-            "name": "Kristen Sonday",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1372012724239151107/tcEuUHOE_normal.jpg",
-            "username": "kristensonday"
+            "created_at": "2022-05-30T15:43:18.000Z",
+            "id": "1531300124789338113",
+            "name": "Nicole Cox",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531300438175207425/vCtGu-OM_normal.jpg",
+            "username": "NicoleC65721849"
         },
         {
-            "created_at": "2018-02-10T18:50:20.000Z",
-            "id": "962398342889185281",
-            "name": "Anery Patel",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1350048531546050560/58DR1XzG_normal.jpg",
-            "username": "patel_anery"
+            "created_at": "2022-05-30T00:02:49.000Z",
+            "id": "1531063492161196033",
+            "name": "Matt Stump",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531063669714460672/fGbTn-j1_normal.jpg",
+            "username": "bigmattncheese"
         },
         {
-            "created_at": "2019-10-10T21:17:29.000Z",
-            "id": "1182404694628601874",
-            "name": "Northwestern University Computer Science",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1196545195023708163/iiRAJXYm_normal.jpg",
-            "username": "northwesterncs"
+            "created_at": "2022-05-30T14:10:58.000Z",
+            "id": "1531276914706501632",
+            "name": "Danielle Jackson",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531277113352937472/rihNB2ZY_normal.jpg",
+            "username": "Daniell63452825"
         },
         {
-            "created_at": "2007-10-11T04:00:26.000Z",
-            "id": "9367542",
-            "name": "scott bradley",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1452663704630308869/R4Cg_pfG_normal.jpg",
-            "username": "scott2b"
+            "created_at": "2022-05-30T13:44:46.000Z",
+            "id": "1531270324947410944",
+            "name": "Tina Hall",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531270521291145216/6mHw_GqW_normal.jpg",
+            "username": "TinaHal28742859"
         },
         {
-            "created_at": "2010-04-09T02:52:22.000Z",
-            "id": "131039808",
-            "name": "Santiago Ibarra",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1356564661932449797/4_m2OhFN_normal.jpg",
-            "username": "santiago_ibarra"
+            "created_at": "2022-05-30T13:33:46.000Z",
+            "id": "1531267555159330817",
+            "name": "Lisa Miller",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531267774311706625/E92EjuWh_normal.jpg",
+            "username": "LisaMil42141315"
         },
         {
-            "created_at": "2013-05-21T21:17:53.000Z",
-            "id": "1447294652",
-            "name": "NinjaCat Software",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1414768563639005185/-mdRBHpc_normal.jpg",
-            "username": "NinjaCat_io"
+            "created_at": "2022-05-30T13:32:58.000Z",
+            "id": "1531267319288459264",
+            "name": "Nora Aguirre",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531267645001334789/Ji3JoKzy_normal.jpg",
+            "username": "NoraAgu98030481"
         },
         {
-            "created_at": "2016-04-01T18:11:09.000Z",
-            "id": "715964733606768642",
-            "name": "R-Croo-D2",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1266488944289513473/HAoI9_4v_normal.jpg",
-            "username": "RebeccaCrootof"
+            "created_at": "2022-05-29T21:05:08.000Z",
+            "id": "1531016828352339968",
+            "name": "Kritika Nayar",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531034415874424832/vR5GKgQS_normal.jpg",
+            "username": "KritikaNayar"
         },
         {
-            "created_at": "2012-10-22T20:02:38.000Z",
-            "id": "898290024",
-            "name": "Jamie",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1392869796526661644/NzfV3cnN_normal.jpg",
-            "username": "Jamie_Rosman"
+            "created_at": "2022-05-30T12:29:12.000Z",
+            "id": "1531251319561928707",
+            "name": "Lina Laguna",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531251523002540033/VNiRDw3L_normal.jpg",
+            "username": "LinaLaguna16"
         },
         {
-            "created_at": "2010-01-11T20:57:57.000Z",
-            "id": "103967533",
-            "name": "Michael E. Dehn",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/890959690401796098/UeM0xPX4_normal.jpg",
-            "username": "mediapython"
+            "created_at": "2022-05-30T12:03:52.000Z",
+            "id": "1531244929527201794",
+            "name": "Stephanie Nguyen",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531245125736833025/bH6IW9IN_normal.jpg",
+            "username": "Stephan78315860"
         },
         {
-            "created_at": "2021-07-20T09:20:33.000Z",
-            "id": "1417414000074268672",
-            "name": "Kunstmensch",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1417415024528744449/oBx2-6JN_normal.jpg",
-            "username": "kunstmensch"
+            "created_at": "2022-05-30T12:00:23.000Z",
+            "id": "1531244061193121797",
+            "name": "Patricia Sykes",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531244281083600896/seEeVGQH_normal.jpg",
+            "username": "Patrici39344665"
         },
         {
-            "created_at": "2010-09-18T18:18:58.000Z",
-            "id": "192288655",
-            "name": "KK \ud83c\uddee\ud83c\uddf3",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1470980707778326532/N7PbpGFu_normal.jpg",
-            "username": "krishnkantj"
+            "created_at": "2022-05-30T11:38:27.000Z",
+            "id": "1531238533482045440",
+            "name": "Brianna Acosta",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531238689002737665/WgfQxmoZ_normal.jpg",
+            "username": "Brianna35257813"
         },
         {
-            "created_at": "2012-10-16T22:21:10.000Z",
-            "id": "885437274",
-            "name": "Daniel Kinal",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/754983980575764480/EME0AoDp_normal.jpg",
-            "username": "dktpm"
+            "created_at": "2021-04-07T11:33:19.000Z",
+            "id": "1379759108392386560",
+            "name": "E-axes Forum",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1379759327691616260/h53nQWNB_normal.jpg",
+            "username": "eaxesforum"
         },
         {
-            "created_at": "2020-08-06T00:54:44.000Z",
-            "id": "1291175645964390400",
-            "name": "INFINITE^NEWTIMESPACETRAVEL",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1517891918113300480/QIe69ppI_normal.jpg",
-            "username": "Spatiacordinate"
+            "created_at": "2022-05-30T10:39:28.000Z",
+            "id": "1531223676582264834",
+            "name": "Debbie Clevenger",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531223905775816704/M-6SmfuM_normal.jpg",
+            "username": "DebbieCleveng13"
         },
         {
-            "created_at": "2012-01-04T16:33:21.000Z",
-            "id": "454996718",
-            "name": "Chase Schaap",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1500940274482262022/3cL2MGJC_normal.jpg",
-            "username": "schaapcr"
+            "created_at": "2022-05-30T07:51:45.000Z",
+            "id": "1531181483767267328",
+            "name": "Jennifer Campbell",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531181673580474368/oO249dkE_normal.jpg",
+            "username": "Jennife98099013"
         },
         {
-            "created_at": "2017-01-23T20:35:09.000Z",
-            "id": "823630167725797376",
-            "name": "Andong Li",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/883704616030007296/jT5WKM6I_normal.jpg",
-            "username": "andonglz"
+            "created_at": "2020-01-06T20:12:08.000Z",
+            "id": "1214278454855647232",
+            "name": "Gabriel Araujo",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1253050006728253441/dF40LRQ0_normal.jpg",
+            "username": "Gbaraujo2k"
         },
         {
-            "created_at": "2012-12-26T18:37:29.000Z",
-            "id": "1037776201",
-            "name": "Aly Sivji",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/564558858224664576/s6s8dm3G_normal.jpeg",
-            "username": "CaiusSivjus"
+            "created_at": "2022-05-10T06:29:30.000Z",
+            "id": "1523912902159192064",
+            "name": "indunil bandara",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1523913101833236486/3WkVQXQy_normal.png",
+            "username": "indunilswa"
         },
         {
-            "created_at": "2021-07-03T12:44:00.000Z",
-            "id": "1411304555497889803",
-            "name": "DAMA Lab",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1411533746868830210/hoyt0o-G_normal.jpg",
-            "username": "dama_lab"
+            "created_at": "2021-09-18T03:19:36.000Z",
+            "id": "1439066494558777347",
+            "name": "Aj Scott",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1461318285983690754/dM5scRkF_normal.jpg",
+            "username": "AnthonyRscott15"
         },
         {
-            "created_at": "2009-12-15T07:19:11.000Z",
-            "id": "96933506",
-            "name": "yash ganti",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/873975897073664000/opbStSRt_normal.jpg",
-            "username": "yashGS"
+            "created_at": "2022-05-30T05:55:54.000Z",
+            "id": "1531152316333576193",
+            "name": "Ann Davis",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531152550363209728/v6K7FsJx_normal.jpg",
+            "username": "AnnDavi29872936"
         },
         {
-            "created_at": "2009-03-15T03:14:21.000Z",
-            "id": "24478294",
-            "name": "Jack G. Conrad",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/843148966820630528/epbTTMMA_normal.jpg",
-            "username": "JackGConrad"
+            "created_at": "2022-05-30T05:51:30.000Z",
+            "id": "1531151179853725697",
+            "name": "Rachel Busch",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531151524969447424/k6lPrXna_normal.jpg",
+            "username": "RachelB88801133"
         },
         {
-            "created_at": "2017-01-02T13:02:05.000Z",
-            "id": "815906007897571328",
-            "name": "Glenda Hannibal",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1461641672446652416/cNIo5VkM_normal.jpg",
-            "username": "ordinary_robot"
+            "created_at": "2022-05-30T05:48:34.000Z",
+            "id": "1531150483725099008",
+            "name": "Miriam Roman",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531150681737928707/1N2DZPru_normal.jpg",
+            "username": "MiriamR75313612"
         },
         {
-            "created_at": "2009-07-26T16:16:47.000Z",
-            "id": "60336093",
-            "name": "Hawkins Gay, MD, MPH",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1229932033943724032/1h6kd3Id_normal.jpg",
-            "username": "hcg_md"
+            "created_at": "2018-08-09T10:50:18.000Z",
+            "id": "1027507355569848320",
+            "name": "ur gay dad",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1346707140371742720/2IUPuD87_normal.jpg",
+            "username": "gisalexwastaken"
         },
         {
-            "created_at": "2020-04-04T19:53:22.000Z",
-            "id": "1246525868660477952",
-            "name": "\ud83c\uddfa\ud83c\udde6Kevin Ford The Submariner \u6f5c\u6c34\u8266\u306e\u7537",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1246526380470415366/LXIuiSZN_normal.jpg",
-            "username": "FordSubmariner"
+            "created_at": "2009-03-20T17:38:43.000Z",
+            "id": "25541497",
+            "name": "Colby Schwartz",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/493592458732007424/TV995Gts_normal.jpeg",
+            "username": "colbydschwartz"
         },
         {
-            "created_at": "2014-12-03T17:22:22.000Z",
-            "id": "2904009821",
-            "name": "Lili Barsky, MD",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1483204686266126343/rXBYGV_-_normal.jpg",
-            "username": "lilibarskymd"
+            "created_at": "2022-05-30T04:33:35.000Z",
+            "id": "1531131557150609408",
+            "name": "Inbal Hardnett",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531131947711610880/XsKNSECV_normal.jpg",
+            "username": "inbal_hardnett"
         },
         {
-            "created_at": "2018-01-14T18:51:09.000Z",
-            "id": "952614076714242048",
-            "name": "Josh Cheema, MD, MSCI",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1365086419123924993/hHKSHqt__normal.jpg",
-            "username": "JCheemaMD"
+            "created_at": "2021-11-26T22:23:31.000Z",
+            "id": "1464359158040436745",
+            "name": "elenagarciaschoeder",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1481531755966386180/oc6m1OG0_normal.jpg",
+            "username": "elenaviennegs"
         },
         {
-            "created_at": "2014-10-24T18:55:05.000Z",
-            "id": "2875756064",
-            "name": "Craig Norquist",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/941823265860759552/nsDdyv6K_normal.jpg",
-            "username": "craignorq"
+            "created_at": "2022-05-30T03:13:04.000Z",
+            "id": "1531111289254203392",
+            "name": "Yanqiqi Zeng",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531111705404755969/kduojNSH_normal.jpg",
+            "username": "joannaaaazeng"
         },
         {
-            "created_at": "2012-03-27T23:31:19.000Z",
-            "id": "538647597",
-            "name": "Colton Cox",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1342911393511702530/I16HqpES_normal.jpg",
-            "username": "colto_n"
+            "created_at": "2021-03-24T13:35:11.000Z",
+            "id": "1374716331136782341",
+            "name": "Jesus Segundo Jr",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1528392893857153028/Cg07JHDH_normal.jpg",
+            "username": "Jesus99232420"
         },
         {
-            "created_at": "2019-12-06T23:40:28.000Z",
-            "id": "1203096844764475392",
-            "name": "\u65e9\u7761\u8eab\u4f53\u597d",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1511036369874784262/j-4SPqqa_normal.jpg",
-            "username": "ljb42775210"
+            "created_at": "2022-05-12T10:24:48.000Z",
+            "id": "1524697054215245824",
+            "name": "Layla-rose Puzon",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1524697245706186753/yKnrA8lE_normal.jpg",
+            "username": "LaylaPuzon"
         },
         {
-            "created_at": "2006-12-17T13:00:19.000Z",
-            "id": "75503",
-            "name": "Martin Stabe",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/2701045322/4ec9a8c81e970efdb5ddb428fa6c8338_normal.png",
-            "username": "martinstabe"
+            "created_at": "2022-05-30T01:47:58.000Z",
+            "id": "1531089938023862272",
+            "name": "Liz Rodriguez",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531090130467004416/BlgzNNOd_normal.jpg",
+            "username": "LizRodr56896992"
         },
         {
-            "created_at": "2008-09-28T21:02:54.000Z",
-            "id": "16502593",
-            "name": "Lauren Wilcox (she/her)",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1272043231040040962/Js-hXQsX_normal.jpg",
-            "username": "lgw_"
+            "created_at": "2022-05-30T01:05:51.000Z",
+            "id": "1531079324966993920",
+            "name": "Lisa Marie",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531079532060737537/CDbsbzE4_normal.jpg",
+            "username": "LisaMar88411421"
         },
         {
-            "created_at": "2010-12-06T05:56:56.000Z",
-            "id": "223372811",
-            "name": "Sobhan Hassanvand \ud83d\udcf0 \u0633\u0628\u062d\u0627\u0646 \u062d\u0633\u0646\u0648\u0646\u062f",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1507052086294421507/4HI2bKDz_normal.jpg",
-            "username": "Hassanvand"
+            "created_at": "2022-04-08T16:15:01.000Z",
+            "id": "1512464008103792650",
+            "name": "Valentina Bastidas",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1512464105155829773/Wp2TYXdy_normal.jpg",
+            "username": "Valenti70635179"
         },
         {
-            "created_at": "2008-12-28T03:24:42.000Z",
-            "id": "18420886",
-            "name": "Josh Hinkle",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1446507642877353989/SZI5RDiy_normal.jpg",
-            "username": "hinklej"
+            "created_at": "2022-05-30T00:36:18.000Z",
+            "id": "1531071831465426944",
+            "name": "Angela Wilson",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531072225105018880/Ny23o6tV_normal.jpg",
+            "username": "AngelaW72879824"
         },
         {
-            "created_at": "2014-10-21T13:13:47.000Z",
-            "id": "2839846665",
-            "name": "Alanah Mitchell PhD",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1096540310891610115/zCluKhb4_normal.png",
-            "username": "mitchell_alanah"
-        },
-        {
-            "created_at": "2021-04-05T19:10:27.000Z",
-            "id": "1379149417211641856",
-            "name": "Johannes Bubenzer",
+            "created_at": "2022-03-15T04:13:48.000Z",
+            "id": "1503585186214199298",
+            "name": "Brandi",
             "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
-            "username": "j_bubenzer"
+            "username": "BrAnDi1154"
         },
         {
-            "created_at": "2015-08-31T16:13:11.000Z",
-            "id": "3405405913",
-            "name": "ashish singh",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/945786533285568512/GU7oBF97_normal.jpg",
-            "username": "aashish__neo"
+            "created_at": "2013-10-01T22:53:56.000Z",
+            "id": "1924852596",
+            "name": "3abir",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1526229094811189250/p0hxBqcf_normal.jpg",
+            "username": "3abir90"
         },
         {
-            "created_at": "2013-08-25T14:08:25.000Z",
-            "id": "1699265970",
-            "name": "Pavi Cidam",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1453962420485976069/A2OhnSyA_normal.jpg",
-            "username": "PCidam"
+            "created_at": "2022-04-19T18:35:23.000Z",
+            "id": "1516485566971494400",
+            "name": "Remi Donnelly",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1516485711423234048/_Z-0L3IF_normal.jpg",
+            "username": "donnelly_remi"
         },
         {
-            "created_at": "2019-03-31T15:00:36.000Z",
-            "id": "1112369106559221760",
-            "name": "Kriztoper Urmeneta",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1112370057298903041/iM5o0pM2_normal.jpg",
-            "username": "KriztoperML"
+            "created_at": "2022-05-29T23:03:36.000Z",
+            "id": "1531048564327337984",
+            "name": "Rhonda Tibbetts",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531048775904796672/GEufJOjs_normal.jpg",
+            "username": "RhondaTibbetts6"
         },
         {
-            "created_at": "2021-03-10T00:43:51.000Z",
-            "id": "1369448793150808072",
-            "name": "sameroon",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1448509138149908480/lEcqCzhv_normal.jpg",
-            "username": "sameroon3"
+            "created_at": "2015-08-19T22:33:46.000Z",
+            "id": "3320700427",
+            "name": "Susan P",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1446821172713295875/TyF3unYu_normal.jpg",
+            "username": "SusanPa83182690"
         },
         {
-            "created_at": "2012-05-03T08:52:07.000Z",
-            "id": "569892762",
-            "name": "mayank agarwal",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/378800000479274762/649b3a485a6c4fdc7aef23cccf4ee55b_normal.jpeg",
-            "username": "mayankaquarius"
+            "created_at": "2022-05-29T20:36:58.000Z",
+            "id": "1531011663142752256",
+            "name": "Victoria Stewart",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531011867220791296/t_PFyMEp_normal.jpg",
+            "username": "Victori13845646"
         },
         {
-            "created_at": "2008-09-10T17:10:45.000Z",
-            "id": "16223852",
-            "name": "Joe Blass",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/800536046484279296/MLaoFifl_normal.jpg",
-            "username": "joeblass"
+            "created_at": "2022-02-25T00:47:49.000Z",
+            "id": "1497010073159315458",
+            "name": ".",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531009514362781699/_LBogmJR_normal.jpg",
+            "username": "aCVSpharmacy"
         },
         {
-            "created_at": "2011-09-21T20:29:42.000Z",
-            "id": "377593496",
-            "name": "Jacob Cavazos",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1402498311316180993/5fe-xbL3_normal.jpg",
-            "username": "jcavazos84"
+            "created_at": "2009-07-10T22:05:09.000Z",
+            "id": "55677963",
+            "name": "Joe Lanni",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1491381683878350848/9-6u0Rcg_normal.jpg",
+            "username": "mrlanni"
         },
         {
-            "created_at": "2009-10-08T14:01:38.000Z",
-            "id": "80854912",
-            "name": "Aditya Agrawal",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/936050923666776064/QPM_WXP4_normal.jpg",
-            "username": "adityarulz26"
+            "created_at": "2022-05-29T18:34:57.000Z",
+            "id": "1530980977455013890",
+            "name": "Amanda Brown",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530981117494497282/IgUQq_UC_normal.jpg",
+            "username": "AmandaB93731233"
         },
         {
-            "created_at": "2015-06-19T07:15:37.000Z",
-            "id": "3249575606",
-            "name": "Mandar",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1166487486329217025/HwV8d7PV_normal.jpg",
-            "username": "mandarsharma"
+            "created_at": "2022-05-29T18:01:27.000Z",
+            "id": "1530972501257654273",
+            "name": "Audrey Thompson",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530972828019093504/tdraLKKr_normal.jpg",
+            "username": "AudreyT92262808"
         },
         {
-            "created_at": "2009-06-13T11:08:33.000Z",
-            "id": "46868609",
-            "name": "Jose Mora",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1245486893648805889/x-pk7lFH_normal.jpg",
-            "username": "j_mora"
+            "created_at": "2022-02-19T16:11:48.000Z",
+            "id": "1495068305673146372",
+            "name": "Marianna Kapsampeli",
+            "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+            "username": "mariannakapsa"
         },
         {
-            "created_at": "2012-03-15T20:40:04.000Z",
-            "id": "525731462",
-            "name": "Robert L. Mauger",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/3048444035/c5e476d27c6dcc72b41aad6837d5a094_normal.png",
-            "username": "RobertAtLaw"
+            "created_at": "2022-05-29T17:51:03.000Z",
+            "id": "1530969876567048192",
+            "name": "Shelly Broadhead",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530970222035095552/qZlr6-R3_normal.jpg",
+            "username": "BroadheadShelly"
         },
         {
-            "created_at": "2014-07-02T09:47:05.000Z",
-            "id": "2599545038",
-            "name": "Haley Yi",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1452318918748610562/ctVdkpVg_normal.jpg",
-            "username": "haleyyi_"
+            "created_at": "2022-05-29T17:06:17.000Z",
+            "id": "1530958627854782464",
+            "name": "Arvind Ahirwar Life couch",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530958720028782592/NSpreUH0_normal.jpg",
+            "username": "ArbindLife"
         },
         {
-            "created_at": "2007-03-19T04:31:14.000Z",
-            "id": "1471341",
-            "name": "Aaron Mayzes",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1517612370989764608/47pZy-Q7_normal.jpg",
-            "username": "Roon"
+            "created_at": "2022-05-29T16:51:11.000Z",
+            "id": "1530954846635016199",
+            "name": "Ann Adams",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530955055138054145/UZaulUQA_normal.jpg",
+            "username": "AnnAdam96182311"
         },
         {
-            "created_at": "2011-05-06T17:45:16.000Z",
-            "id": "294187388",
-            "name": "Yi-an",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1496980668173242373/_W7G8tJa_normal.jpg",
-            "username": "YYangChicago"
+            "created_at": "2022-05-29T16:46:25.000Z",
+            "id": "1530953646686486528",
+            "name": "Alyssa Wood",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530953851054002179/ifKnLJtx_normal.jpg",
+            "username": "AlyssaW75289977"
         },
         {
-            "created_at": "2010-12-01T23:06:20.000Z",
-            "id": "221904417",
-            "name": "Plastic Capital",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1270324517676683264/NXnLT4NO_normal.jpg",
-            "username": "plastic_capital"
+            "created_at": "2020-08-02T15:28:06.000Z",
+            "id": "1289946045519036416",
+            "name": "Jonathan Fan",
+            "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+            "username": "monkeysfan2"
         },
         {
-            "created_at": "2010-04-22T13:28:06.000Z",
-            "id": "135883430",
-            "name": "Ed Van Buren",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/773550104892563456/30U4eUEg_normal.jpg",
-            "username": "emvanburen"
+            "created_at": "2022-05-29T14:12:17.000Z",
+            "id": "1530914825681117185",
+            "name": "Miosotis Robles",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530915167340752901/smq_3NMw_normal.jpg",
+            "username": "MiosotisRobles7"
         },
         {
-            "created_at": "2014-04-05T19:30:01.000Z",
-            "id": "2429356926",
-            "name": "Josh Batz",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/589040204960366592/21wShg5N_normal.jpg",
-            "username": "josh_batz"
+            "created_at": "2022-05-29T13:13:27.000Z",
+            "id": "1530900055409844224",
+            "name": "Amy Brand",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530900254727413760/yEQzBJCy_normal.jpg",
+            "username": "AmyBran44995424"
         },
         {
-            "created_at": "2019-10-10T11:37:45.000Z",
-            "id": "1182258877779365888",
-            "name": "Lena Nieper",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1276798155905028101/MiXBmRuf_normal.jpg",
-            "username": "LenaNieper"
+            "created_at": "2008-12-23T16:27:22.000Z",
+            "id": "18336143",
+            "name": "David Eggert",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530208470603026432/tv5hn4Pg_normal.jpg",
+            "username": "DavidEggert00"
         },
         {
-            "created_at": "2019-06-30T14:17:14.000Z",
-            "id": "1145335489987321857",
-            "name": "PHICOR",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1156256625835085826/mFKSIoh0_normal.jpg",
-            "username": "PHICORteam"
+            "created_at": "2022-05-29T10:31:47.000Z",
+            "id": "1530859336477835265",
+            "name": "Shawn Kurek",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530859662723416064/EzClhLGE_normal.jpg",
+            "username": "KurekShawn"
         },
         {
-            "created_at": "2020-04-03T23:18:00.000Z",
-            "id": "1246215340348051458",
-            "name": "Chaz Keeney",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1418274015844704260/8aXXWIOb_normal.jpg",
-            "username": "ChazKeeney"
+            "created_at": "2014-05-31T07:52:19.000Z",
+            "id": "2536878134",
+            "name": "Lakshmi Prabha",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1491264056782581763/-1eGLEQO_normal.jpg",
+            "username": "LakshmiPrabha91"
         },
         {
-            "created_at": "2016-08-03T05:58:26.000Z",
-            "id": "760716437375909888",
-            "name": "Nicole Tilly",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/788286679668760576/AgM41ejl_normal.jpg",
-            "username": "nic_tilly"
+            "created_at": "2022-04-08T23:44:05.000Z",
+            "id": "1512577023008546818",
+            "name": "Wynona Robayo",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1512577097029586947/sDSfkUR-_normal.jpg",
+            "username": "RobayoWynona"
         },
         {
-            "created_at": "2006-12-21T14:23:03.000Z",
-            "id": "111743",
-            "name": "Ed Dodds",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1519851404373987330/EkL5zaRh_normal.jpg",
-            "username": "ed_dodds"
+            "created_at": "2022-05-29T08:34:08.000Z",
+            "id": "1530829761932836864",
+            "name": "Ali Love",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530829972033908737/K0_07Kjn_normal.jpg",
+            "username": "AliLove98072834"
         },
         {
-            "created_at": "2010-02-03T21:57:10.000Z",
-            "id": "111122939",
-            "name": "Juan Moreno",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1268377759195291654/_lBpY4op_normal.jpg",
-            "username": "JsMorenop11"
+            "created_at": "2022-05-29T07:37:43.000Z",
+            "id": "1530815529157464065",
+            "name": "Julie Tapley",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530815852395671552/VxWCbTUh_normal.jpg",
+            "username": "JulieTa27672972"
         },
         {
-            "created_at": "2020-11-19T16:45:02.000Z",
-            "id": "1329465458102325251",
-            "name": "Investigative Editing Corps",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1329525045459361793/vAVa-FXs_normal.jpg",
-            "username": "InvEditingCorps"
+            "created_at": "2009-05-27T04:01:26.000Z",
+            "id": "42810661",
+            "name": "Sharon Szczepanik",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1726725464/image_normal.jpg",
+            "username": "dizedmiles"
         },
         {
-            "created_at": "2009-09-01T02:29:07.000Z",
-            "id": "70574113",
-            "name": "Djordje Padejski",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/594768300724199424/R380icBL_normal.jpg",
-            "username": "djordjepadejski"
+            "created_at": "2022-05-06T18:45:27.000Z",
+            "id": "1522648698077040649",
+            "name": "Karla Leischner",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1522648844403679232/WyMDN19u_normal.jpg",
+            "username": "KarlaLeischner"
         },
         {
-            "created_at": "2008-05-07T15:43:15.000Z",
-            "id": "14687908",
-            "name": "Ben Blackburn",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1511395140534947840/CHua82lj_normal.jpg",
-            "username": "OtherBenjamin"
+            "created_at": "2022-05-29T05:09:30.000Z",
+            "id": "1530778266860040193",
+            "name": "Samantha Clark",
+            "profile_image_url": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+            "username": "Samanth05531690"
         },
         {
-            "created_at": "2010-12-06T22:50:54.000Z",
-            "id": "223635184",
-            "name": "Heather Mason",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1344448820105494528/SmoQlx-K_normal.jpg",
-            "username": "heatherlmason"
+            "created_at": "2022-05-29T03:55:39.000Z",
+            "id": "1530759613205090304",
+            "name": "Angela Miller",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530759990486900736/q5FdYghT_normal.jpg",
+            "username": "AngelaM62874004"
         },
         {
-            "created_at": "2014-06-18T12:24:26.000Z",
-            "id": "2574765739",
-            "name": "Fredrik Westerlund",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/542230172083056640/uhnwvUuO_normal.jpeg",
-            "username": "fredwesterlund"
+            "created_at": "2022-05-29T03:36:53.000Z",
+            "id": "1530754949935529985",
+            "name": "Samantha White",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530755160955158529/PM6pIvok_normal.jpg",
+            "username": "Samanth36635964"
         },
         {
-            "created_at": "2013-03-21T14:28:01.000Z",
-            "id": "1286118655",
-            "name": "Amanda Goldmann",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/3409525013/3fbb7e71cc7edee77e4acba13e9de0a7_normal.jpeg",
-            "username": "amandagoldmann"
+            "created_at": "2022-05-29T03:26:33.000Z",
+            "id": "1530752343129702402",
+            "name": "Sarah Evans",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530752563729031168/Phsj-MaP_normal.jpg",
+            "username": "SarahEv19507422"
         },
         {
-            "created_at": "2009-05-22T18:45:33.000Z",
-            "id": "41874067",
-            "name": "Vlad Miretsky",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/225408463/me_normal.jpg",
-            "username": "VladMiretsky"
+            "created_at": "2022-05-29T03:20:21.000Z",
+            "id": "1530750749348462592",
+            "name": "Vira Wilbourn",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530751097723187200/qVdBY-EZ_normal.jpg",
+            "username": "WilbournVira"
         },
         {
-            "created_at": "2017-09-19T20:05:17.000Z",
-            "id": "910233354666090496",
-            "name": "Data Decisioning",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/996119460569235456/UMGf7WT9_normal.jpg",
-            "username": "datadecisioning"
+            "created_at": "2022-01-24T14:48:15.000Z",
+            "id": "1485625400961208320",
+            "name": "Aryan",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1493879996301160448/LBaP5DWS_normal.jpg",
+            "username": "Coolboi24669447"
+        },
+        {
+            "created_at": "2022-05-29T00:53:24.000Z",
+            "id": "1530713811501690882",
+            "name": "Rhonda Abraham",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530714010143838209/8N6XtYrx_normal.jpg",
+            "username": "RhondaA40805344"
+        },
+        {
+            "created_at": "2022-05-20T02:42:05.000Z",
+            "id": "1527479625449865225",
+            "name": "TERRY OSTAZESKI",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1527479749706121240/D0Ch5026_normal.jpg",
+            "username": "TOstazeski"
+        },
+        {
+            "created_at": "2022-05-28T23:04:31.000Z",
+            "id": "1530686409140408326",
+            "name": "Brandy Rocha",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530686613553983489/jZRoORpq_normal.jpg",
+            "username": "BrandyR32163595"
+        },
+        {
+            "created_at": "2022-05-28T22:09:50.000Z",
+            "id": "1530672650359820288",
+            "name": "Brenda Prewitt",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530672853678686208/k079JHqS_normal.jpg",
+            "username": "BrendaPrewitt6"
+        },
+        {
+            "created_at": "2022-05-28T21:51:20.000Z",
+            "id": "1530667953032937472",
+            "name": "Desiree Hernandez",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530668309368434688/jVCwWGTJ_normal.jpg",
+            "username": "Desiree19314810"
+        },
+        {
+            "created_at": "2022-05-28T21:15:37.000Z",
+            "id": "1530659044813307912",
+            "name": "My Hammerstad",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530659136731549696/acNa_96G_normal.jpg",
+            "username": "HammerstadMy"
+        },
+        {
+            "created_at": "2022-05-28T21:12:35.000Z",
+            "id": "1530658196267753473",
+            "name": "Natalie White",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530658538938200064/Bt7Q44bs_normal.jpg",
+            "username": "Natalie88420752"
+        },
+        {
+            "created_at": "2022-05-28T21:10:12.000Z",
+            "id": "1530657605626253312",
+            "name": "Jessica Goodwin",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530657942466605056/GCc1UVAW_normal.jpg",
+            "username": "Jessica94436525"
+        },
+        {
+            "created_at": "2022-05-28T20:57:01.000Z",
+            "id": "1530654309804756994",
+            "name": "Assaultive",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531271080228397056/anyCyvOm_normal.jpg",
+            "username": "AssaultiveJ"
         }
     ],
     "oldest_10_followers": [
         {
-            "created_at": "2006-12-21T14:23:03.000Z",
-            "id": "111743",
-            "name": "Ed Dodds",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1519851404373987330/EkL5zaRh_normal.jpg",
-            "username": "ed_dodds"
+            "created_at": "2022-01-24T14:48:15.000Z",
+            "id": "1485625400961208320",
+            "name": "Aryan",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1493879996301160448/LBaP5DWS_normal.jpg",
+            "username": "Coolboi24669447"
         },
         {
-            "created_at": "2010-02-03T21:57:10.000Z",
-            "id": "111122939",
-            "name": "Juan Moreno",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1268377759195291654/_lBpY4op_normal.jpg",
-            "username": "JsMorenop11"
+            "created_at": "2022-05-29T00:53:24.000Z",
+            "id": "1530713811501690882",
+            "name": "Rhonda Abraham",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530714010143838209/8N6XtYrx_normal.jpg",
+            "username": "RhondaA40805344"
         },
         {
-            "created_at": "2020-11-19T16:45:02.000Z",
-            "id": "1329465458102325251",
-            "name": "Investigative Editing Corps",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1329525045459361793/vAVa-FXs_normal.jpg",
-            "username": "InvEditingCorps"
+            "created_at": "2022-05-20T02:42:05.000Z",
+            "id": "1527479625449865225",
+            "name": "TERRY OSTAZESKI",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1527479749706121240/D0Ch5026_normal.jpg",
+            "username": "TOstazeski"
         },
         {
-            "created_at": "2009-09-01T02:29:07.000Z",
-            "id": "70574113",
-            "name": "Djordje Padejski",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/594768300724199424/R380icBL_normal.jpg",
-            "username": "djordjepadejski"
+            "created_at": "2022-05-28T23:04:31.000Z",
+            "id": "1530686409140408326",
+            "name": "Brandy Rocha",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530686613553983489/jZRoORpq_normal.jpg",
+            "username": "BrandyR32163595"
         },
         {
-            "created_at": "2008-05-07T15:43:15.000Z",
-            "id": "14687908",
-            "name": "Ben Blackburn",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1511395140534947840/CHua82lj_normal.jpg",
-            "username": "OtherBenjamin"
+            "created_at": "2022-05-28T22:09:50.000Z",
+            "id": "1530672650359820288",
+            "name": "Brenda Prewitt",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530672853678686208/k079JHqS_normal.jpg",
+            "username": "BrendaPrewitt6"
         },
         {
-            "created_at": "2010-12-06T22:50:54.000Z",
-            "id": "223635184",
-            "name": "Heather Mason",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/1344448820105494528/SmoQlx-K_normal.jpg",
-            "username": "heatherlmason"
+            "created_at": "2022-05-28T21:51:20.000Z",
+            "id": "1530667953032937472",
+            "name": "Desiree Hernandez",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530668309368434688/jVCwWGTJ_normal.jpg",
+            "username": "Desiree19314810"
         },
         {
-            "created_at": "2014-06-18T12:24:26.000Z",
-            "id": "2574765739",
-            "name": "Fredrik Westerlund",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/542230172083056640/uhnwvUuO_normal.jpeg",
-            "username": "fredwesterlund"
+            "created_at": "2022-05-28T21:15:37.000Z",
+            "id": "1530659044813307912",
+            "name": "My Hammerstad",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530659136731549696/acNa_96G_normal.jpg",
+            "username": "HammerstadMy"
         },
         {
-            "created_at": "2013-03-21T14:28:01.000Z",
-            "id": "1286118655",
-            "name": "Amanda Goldmann",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/3409525013/3fbb7e71cc7edee77e4acba13e9de0a7_normal.jpeg",
-            "username": "amandagoldmann"
+            "created_at": "2022-05-28T21:12:35.000Z",
+            "id": "1530658196267753473",
+            "name": "Natalie White",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530658538938200064/Bt7Q44bs_normal.jpg",
+            "username": "Natalie88420752"
         },
         {
-            "created_at": "2009-05-22T18:45:33.000Z",
-            "id": "41874067",
-            "name": "Vlad Miretsky",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/225408463/me_normal.jpg",
-            "username": "VladMiretsky"
+            "created_at": "2022-05-28T21:10:12.000Z",
+            "id": "1530657605626253312",
+            "name": "Jessica Goodwin",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1530657942466605056/GCc1UVAW_normal.jpg",
+            "username": "Jessica94436525"
         },
         {
-            "created_at": "2017-09-19T20:05:17.000Z",
-            "id": "910233354666090496",
-            "name": "Data Decisioning",
-            "profile_image_url": "https://pbs.twimg.com/profile_images/996119460569235456/UMGf7WT9_normal.jpg",
-            "username": "datadecisioning"
+            "created_at": "2022-05-28T20:57:01.000Z",
+            "id": "1530654309804756994",
+            "name": "Assaultive",
+            "profile_image_url": "https://pbs.twimg.com/profile_images/1531271080228397056/anyCyvOm_normal.jpg",
+            "username": "AssaultiveJ"
         }
     ]
 }
