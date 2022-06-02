@@ -1,4 +1,4 @@
-# twitterhawk
+# TwitterHawk
 To launch TwitterHawk, download all code within the "dash_test" folder.
 
 In terminal, run "python3 app.py," launching our app locally on your computer.
